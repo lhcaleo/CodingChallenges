@@ -1,6 +1,6 @@
 import java.util.*;
 // Idea: Using provided data structures to test directly
-public class guessthedatastructure_260711526 {
+public class guessthedatastructure {
 	public static void main(String[] args) {
 		// Use scanner to get input
 		Scanner sc = new Scanner(System.in);

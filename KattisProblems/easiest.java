@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class easiest_260711526 
+public class easiest 
 {
 	public static void main(String[] args) 
 	{
