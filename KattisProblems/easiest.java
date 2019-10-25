@@ -6,7 +6,6 @@ public class easiest
 	{
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
-		int sum = 0;
 		// input is a list of integers 1 <= n <= 1000
 		while(n != 0){
 			System.out.println(findP(n));
