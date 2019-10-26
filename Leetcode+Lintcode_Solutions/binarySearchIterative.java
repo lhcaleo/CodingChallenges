@@ -1,5 +1,6 @@
 // https://leetcode.com/problems/binary-search/
 // can be used as binary search template
+// Iterative
 class Solution {
     public int search(int[] nums, int target) 
     {
