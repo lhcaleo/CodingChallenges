@@ -15,3 +15,31 @@ class Solution
         return min;
     }
 }
+// O(log n) solution, binary search
+class Solution {
+    public int findMin(int[] nums) 
+    {
+        // Corner case
+        if (nums == null || nums.length == 0) 
+        { 
+            return -1;
+        }
+        int left = 0, right = nums.length - 1;
+        
+        // Stop the while loop when we have only one element, it's the minimun one
+        while (left < right) 
+        { 
+            int mid = left + (right - left) / 2;
+            if (nums[mid] > nums[right]) 
+            {
+                // skip the nums[mid] since it is already greater
+                left = mid + 1; 
+            } 
+            else 
+            {
+                right = mid;
+            }
+        }
+        return nums[left]; // return the only element left
+    }
+}
