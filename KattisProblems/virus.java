@@ -25,27 +25,16 @@ public class virus_260711526
                 break;
             } 
         }
+
+        // Find # of same characters from end
         while (sameFromEnd < minLength && (in.charAt(in.length()-1-sameFromEnd) == out.charAt(out.length()-1-sameFromEnd)))
         {
             sameFromEnd++;
         }
 
-        
         int result = out.length() - sameFromStart - sameFromEnd;
-        result = Math.max(result,0); // if result > 0 , same. If result <=0 result = 0
-        // return > 0 return 
+        result = Math.max(result,0);
         
-        System.out.println(Math.max(result, out.length() -in.length()));
-        
-        
-//        if(result > 0)
-//        {
-//            System.out.println(result);
-//        }
-//        // if all the characters in second string are erased, 
-//        // just find the # of characters left in first string
-//        else System.out.println(Math.abs(in.length() - out.length()));
-        
+        System.out.println(Math.max(result, out.length() - in.length()));
     }
-
 }
