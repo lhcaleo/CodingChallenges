@@ -12,7 +12,8 @@ public class orders
 		int[] itemCosts = new int[n];     // cost of each item
 		for (int i = 0; i < n; i++) { itemCosts[i] = scanner.nextInt();}
 		// initialize with -2 expect index 0
-		int[] dp = new int[32000];
+		// 30000 + 5000 avoid array of out bound exception
+		int[] dp = new int[35000];
 		Arrays.fill(dp, -2);
 		dp[0] = 0;
 		
@@ -30,7 +31,7 @@ public class orders
 			}
 		}	
 		
-		int m = scanner.nextInt();        // # of orders placed
+		int m = scanner.nextInt();      // # of orders placed
 		// ginve cost of each order, find its corresponding options
 		for(int i = 0; i < m; i++)
 		{
@@ -39,6 +40,7 @@ public class orders
 			else if (dp[target] == -2) System.out.println("Impossible");
 			else
 			{
+				// output in ascending order 
 				PriorityQueue<Integer> queue = new PriorityQueue<>();
 				while(target > 0)
 				{
