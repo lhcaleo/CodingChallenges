@@ -19,4 +19,5 @@
 | 74   | [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) | Medium     |
 | 240  | [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/) | Medium     |
 | 144  | [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/) | Medium     |
+| 94   | [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) | Medium     |
 
