@@ -23,6 +23,10 @@
 | 145  | [Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/) | Hard       |
 | 322  | [Coin Change](https://leetcode.com/problems/coin-change/)    | Medium     |
 | 53   | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | Easy       |
+| 509  | [Fibonacci Number](https://leetcode.com/problems/fibonacci-number/) | Easy       |
+| 1137 | [N-th Tribonacci Number](https://leetcode.com/problems/n-th-tribonacci-number/) | Easy       |
+
+
 
 
 
