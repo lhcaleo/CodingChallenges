@@ -1,5 +1,5 @@
 // https://leetcode.com/problems/coin-change/
-// Dynamic Programming
+// (Max or Min Value Type) Dynamic Programming
 // Time: O(m*n)  m: amount n: number of type of coins
 // Space: O(m)
 
