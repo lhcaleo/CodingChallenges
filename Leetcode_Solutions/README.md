@@ -22,6 +22,7 @@
 | 94   | [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) | Medium     |
 | 145  | [Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/) | Hard       |
 | 322  | [Coin Change](https://leetcode.com/problems/coin-change/)    | Medium     |
+| 279  | [Perfect Squares](https://leetcode.com/problems/perfect-squares/) | Medium     |
 | 62   | [Unique Paths](https://leetcode.com/problems/unique-paths/)  | Medium     |
 | 55   | [Jump Game](https://leetcode.com/problems/jump-game/)        | Medium     |
 | 53   | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | Easy       |
