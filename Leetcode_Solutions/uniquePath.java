@@ -1,5 +1,5 @@
 // https://leetcode.com/problems/unique-paths/
-// Dynamic Programming Time & Space: O(m*n)
+//(How Many Type) Dynamic Programming Time & Space: O(m*n)
 class Solution 
 {
 	public int uniquePaths(int m, int n) 
