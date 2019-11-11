@@ -3,6 +3,7 @@
 | #    | Title                                                        | Difficulty |
 | ---- | ------------------------------------------------------------ | ---------- |
 | 1    | [Two Sum](https://leetcode.com/problems/two-sum/)            | Easy       |
+| 2    | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | Medium     |
 | 9    | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | Easy       |
 | 13   | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | Easy       |
 | 14   | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | Easy       |
