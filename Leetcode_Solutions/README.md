@@ -1,4 +1,4 @@
-# Table of Solved Problems
+# Table of Solved Problems 
 
 | #    | Title                                                        | Difficulty |
 | ---- | ------------------------------------------------------------ | ---------- |
@@ -34,7 +34,7 @@
 | 1137 | [N-th Tribonacci Number](https://leetcode.com/problems/n-th-tribonacci-number/) | Easy       |
 | 70   | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | Easy       |
 
-
+Total # = 31
 
 
 
