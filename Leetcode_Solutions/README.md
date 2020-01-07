@@ -10,6 +10,7 @@
 | 14   | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | Easy       |
 | 27   | [Remove Element](https://leetcode.com/problems/remove-element/) | Easy       |
 | 28   | [Implement strStr()](https://leetcode.com/problems/implement-strstr/) | Easy       |
+| 7    | [Reverse Integer](https://leetcode.com/problems/reverse-integer/) | Easy       |
 | 206  | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Easy       |
 | 344  | [Reverse String](https://leetcode.com/problems/reverse-string/) | Easy       |
 | 20   | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | Easy       |
