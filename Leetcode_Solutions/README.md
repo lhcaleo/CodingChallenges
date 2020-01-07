@@ -8,6 +8,7 @@
 | 9    | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | Easy       |
 | 13   | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | Easy       |
 | 14   | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | Easy       |
+| 172  | [Factorial Trailing Zeros](https://leetcode.com/problems/factorial-trailing-zeroes/) | Easy       |
 | 27   | [Remove Element](https://leetcode.com/problems/remove-element/) | Easy       |
 | 28   | [Implement strStr()](https://leetcode.com/problems/implement-strstr/) | Easy       |
 | 7    | [Reverse Integer](https://leetcode.com/problems/reverse-integer/) | Easy       |
