@@ -12,7 +12,7 @@
 | 28   | [Implement strStr()](https://leetcode.com/problems/implement-strstr/) | Easy       |
 | 206  | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Easy       |
 | 344  | [Reverse String](https://leetcode.com/problems/reverse-string/) | Easy       |
-| 20   | [ Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | Easy       |
+| 20   | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | Easy       |
 | 716  | [Max Stack](https://leetcode.com/articles/max-stack/)        | Easy       |
 | 155  | [Min Stack](https://leetcode.com/problems/min-stack/)        | Easy       |
 | 704  | [Binary Search](https://leetcode.com/problems/binary-search/) | Easy       |
@@ -20,7 +20,7 @@
 | 26   | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | Easy       |
 | 88   | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | Easy       |
 | 21   | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Easy       |
-| 153  | [ Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | Medium     |
+| 153  | [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | Medium     |
 | 74   | [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) | Medium     |
 | 240  | [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/) | Medium     |
 | 144  | [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/) | Medium     |
@@ -34,8 +34,7 @@
 | 509  | [Fibonacci Number](https://leetcode.com/problems/fibonacci-number/) | Easy       |
 | 1137 | [N-th Tribonacci Number](https://leetcode.com/problems/n-th-tribonacci-number/) | Easy       |
 | 70   | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | Easy       |
-
-Total # = 31
+| 46   | [Permutations](https://leetcode.com/problems/permutations/)  | Medium     |
 
 
 
