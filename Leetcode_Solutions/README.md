@@ -38,11 +38,12 @@
 | 1137 | [N-th Tribonacci Number](https://leetcode.com/problems/n-th-tribonacci-number/) | Easy       |
 | 70   | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | Easy       |
 | 46   | [Permutations](https://leetcode.com/problems/permutations/)  | Medium     |
+| 77   | [Combinations](https://leetcode.com/problems/combinations/)  | Medium     |
 | 78   | [Subsets](https://leetcode.com/problems/subsets/)            | Medium     |
 
-Total # = 37
+Total # = 38
 
-
+TODO: subsets II, permutation II, combination sum, combination sum II, N queens
 
 
 
