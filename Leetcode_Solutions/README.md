@@ -32,6 +32,7 @@
 | 144  | [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/) | Medium     |
 | 94   | [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) | Medium     |
 | 145  | [Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/) | Hard       |
+| 104  | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | Easy       |
 | 322  | [Coin Change](https://leetcode.com/problems/coin-change/)    | Medium     |
 | 279  | [Perfect Squares](https://leetcode.com/problems/perfect-squares/) | Medium     |
 | 62   | [Unique Paths](https://leetcode.com/problems/unique-paths/)  | Medium     |
@@ -44,7 +45,7 @@
 | 77   | [Combinations](https://leetcode.com/problems/combinations/)  | Medium     |
 | 78   | [Subsets](https://leetcode.com/problems/subsets/)            | Medium     |
 
-Total # = 40
+Total # = 41
 
 TODO: subsets II, permutation II, combination sum, combination sum II, N queens
 
