@@ -11,6 +11,7 @@
 | 13   | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | Easy       |
 | 14   | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | Easy       |
 | 172  | [Factorial Trailing Zeros](https://leetcode.com/problems/factorial-trailing-zeroes/) | Easy       |
+| 867  | [Transpose Matrix](https://leetcode.com/problems/transpose-matrix/) | Easy       |
 | 27   | [Remove Element](https://leetcode.com/problems/remove-element/) | Easy       |
 | 237  | [Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/) | Easy       |
 | 28   | [Implement strStr()](https://leetcode.com/problems/implement-strstr/) | Easy       |
@@ -45,7 +46,7 @@
 | 77   | [Combinations](https://leetcode.com/problems/combinations/)  | Medium     |
 | 78   | [Subsets](https://leetcode.com/problems/subsets/)            | Medium     |
 
-Total # = 41
+Total # = 42
 
 TODO: subsets II, permutation II, combination sum, combination sum II, N queens
 
