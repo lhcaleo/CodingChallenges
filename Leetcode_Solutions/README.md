@@ -46,8 +46,9 @@
 | 46   | [Permutations](https://leetcode.com/problems/permutations/)  | Medium     |
 | 77   | [Combinations](https://leetcode.com/problems/combinations/)  | Medium     |
 | 78   | [Subsets](https://leetcode.com/problems/subsets/)            | Medium     |
+| 169  | [Majority Element](https://leetcode.com/problems/majority-element/) | Easy       |
 
-Total # = 43
+Total # = 44
 
 TODO: subsets II, permutation II, combination sum, combination sum II, N queens
 
