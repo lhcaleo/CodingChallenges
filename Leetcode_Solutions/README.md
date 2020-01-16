@@ -30,11 +30,15 @@
 | 153  | [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | Medium     |
 | 74   | [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) | Medium     |
 | 240  | [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/) | Medium     |
+|      | **Binary Tree Traversal**                                    |            |
 | 144  | [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/) | Medium     |
 | 94   | [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) | Medium     |
 | 145  | [Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/) | Hard       |
+|      | **Recursion + Binary Tree**                                  |            |
 | 104  | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | Easy       |
 | 110  | [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/) | Easy       |
+| 543  | [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/) | Easy       |
+|      |                                                              |            |
 | 322  | [Coin Change](https://leetcode.com/problems/coin-change/)    | Medium     |
 | 279  | [Perfect Squares](https://leetcode.com/problems/perfect-squares/) | Medium     |
 | 62   | [Unique Paths](https://leetcode.com/problems/unique-paths/)  | Medium     |
@@ -48,7 +52,7 @@
 | 78   | [Subsets](https://leetcode.com/problems/subsets/)            | Medium     |
 | 169  | [Majority Element](https://leetcode.com/problems/majority-element/) | Easy       |
 
-Total # = 44
+Total # = 45
 
 TODO: subsets II, permutation II, combination sum, combination sum II, N queens
 
