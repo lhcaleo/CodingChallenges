@@ -39,6 +39,7 @@
 | 110  | [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/) | Easy       |
 | 543  | [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/) | Easy       |
 | 226  | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | Easy       |
+| 617  | [Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/) | Easy       |
 |      |                                                              |            |
 | 322  | [Coin Change](https://leetcode.com/problems/coin-change/)    | Medium     |
 | 279  | [Perfect Squares](https://leetcode.com/problems/perfect-squares/) | Medium     |
@@ -53,7 +54,7 @@
 | 78   | [Subsets](https://leetcode.com/problems/subsets/)            | Medium     |
 | 169  | [Majority Element](https://leetcode.com/problems/majority-element/) | Easy       |
 
-Total # = 45
+Total # = 46
 
 TODO: subsets II, permutation II, combination sum, combination sum II, N queens
 
