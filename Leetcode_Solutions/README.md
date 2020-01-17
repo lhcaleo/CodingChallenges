@@ -43,6 +43,7 @@
 | 112  | [Path Sum](https://leetcode.com/problems/path-sum/)          | Easy       |
 | 437  | [Path Sum III](https://leetcode.com/problems/path-sum-iii/)  | Easy       |
 | 572  | [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/) | Easy       |
+| 101  | [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/) | Easy       |
 |      |                                                              |            |
 | 322  | [Coin Change](https://leetcode.com/problems/coin-change/)    | Medium     |
 | 279  | [Perfect Squares](https://leetcode.com/problems/perfect-squares/) | Medium     |
@@ -57,7 +58,7 @@
 | 78   | [Subsets](https://leetcode.com/problems/subsets/)            | Medium     |
 | 169  | [Majority Element](https://leetcode.com/problems/majority-element/) | Easy       |
 
-Total # = 51
+Total # = 52
 
 TODO: subsets II, permutation II, combination sum, combination sum II, N queens, Path Sum II
 
