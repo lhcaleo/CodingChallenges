@@ -7,6 +7,7 @@ SELECT
 AS SecondHighestSalary
 ;
 
+
 # The IFNULL() function returns a specified value if the expression is NULL.
 # If the expression is NOT NULL, this function returns the expression.
 SELECT
@@ -19,4 +20,10 @@ SELECT
         , NULL
     )
 AS SecondHighestSalary
+;
+
+
+SELECT MAX(Salary) AS SecondHighestSalary
+FROM Employee
+WHERE Salary < (SELECT MAX(Salary) FROM Employee)
 ;
