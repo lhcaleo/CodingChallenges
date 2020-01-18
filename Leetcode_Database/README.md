@@ -24,6 +24,9 @@
   - [182. Duplicate Emails](#182-duplicate-emails)
     - [Description](#description-6)
     - [Solution](#solution-6)
+  - [196. Delete Duplicate Emails](#196-delete-duplicate-emails)
+    - [Description](#description-7)
+    - [Solution](#solution-7)
 
 <!-- /TOC -->
 ## 175. Combine Two Tables
@@ -422,6 +425,71 @@ SELECT Email
 FROM Person
 GROUP BY Email
 HAVING COUNT(Email) > 1
+;
+```
+
+
+
+## 196. Delete Duplicate Emails
+<a id="markdown-delete-duplicate-emails" name="delete-duplicate-emails"></a>
+
+https://leetcode.com/problems/delete-duplicate-emails/
+
+### Description
+<a id="markdown-description" name="description"></a>
+
+Write a SQL query to **delete** all duplicate email entries in a table named `Person`, keeping only unique emails based on its *smallest* **Id**.
+
+```
++----+------------------+
+| Id | Email            |
++----+------------------+
+| 1  | john@example.com |
+| 2  | bob@example.com  |
+| 3  | john@example.com |
++----+------------------+
+Id is the primary key column for this table.
+```
+
+For example, after running your query, the above `Person` table should have the following rows:
+
+```
++----+------------------+
+| Id | Email            |
++----+------------------+
+| 1  | john@example.com |
+| 2  | bob@example.com  |
++----+------------------+
+```
+
+**Note:**
+
+Your output is the whole `Person` table after executing your sql. Use `delete` statement.
+
+### Solution
+<a id="markdown-solution" name="solution"></a>
+
+```mysql
+DELETE p1
+FROM Person p1, Person p2
+WHERE p1.Email = p2.Email AND p1.Id > p2.Id
+;
+```
+
+
+
+```mysql
+-- More efficient way
+DELETE FROM Person
+WHERE Id NOT IN -- delete rows that is not in the selection
+(   
+    SELECT Id FROM
+   (
+       SELECT MIN(Id) AS Id -- ignore rows with greater Id and same Email
+       FROM Person
+       GROUP BY Email
+   ) AS temp    -- use as temp table, to avoid error
+)
 ;
 ```
 
