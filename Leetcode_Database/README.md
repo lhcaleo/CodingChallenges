@@ -163,3 +163,176 @@ FROM World
 WHERE area > 3000000 OR population > 25000000
 ```
 
+
+
+## 627. Swap Salary
+
+https://leetcode.com/problems/swap-salary/
+
+### Description
+
+Given a table `salary`, such as the one below, that has m=male and f=female values. Swap all f and m values (i.e., change all f values to m and vice versa) with a **single update statement** and no intermediate temp table.
+
+Note that you must write a single update statement, **DO NOT** write any select statement for this problem.
+
+ 
+
+**Example:**
+
+```
+| id | name | sex | salary |
+|----|------|-----|--------|
+| 1  | A    | m   | 2500   |
+| 2  | B    | f   | 1500   |
+| 3  | C    | m   | 5500   |
+| 4  | D    | f   | 500    |
+```
+
+After running your **update** statement, the above salary table should have the following rows:
+
+```
+| id | name | sex | salary |
+|----|------|-----|--------|
+| 1  | A    | f   | 2500   |
+| 2  | B    | m   | 1500   |
+| 3  | C    | f   | 5500   |
+| 4  | D    | m   | 500    |
+```
+
+
+
+### Solution
+
+```mysql
+UPDATE salary
+SET sex = 
+    CASE sex
+        WHEN 'm' THEN 'f'
+        ELSE 'm'
+    END
+;
+# or 
+UPDATE salary
+SET sex = 
+    CASE
+        WHEN sex ='m' THEN 'f'
+        ELSE 'm'
+    END
+;
+```
+
+**Or, use IF( ) function**
+
+`IF(condition, value_if_true, value_if_false)`
+
+```
+UPDATE salary
+SET sex = IF (sex = 'm', 'f', 'm')
+;
+```
+
+
+
+## 620. Not Boring Movies
+
+https://leetcode.com/problems/not-boring-movies/
+
+### Description
+
+X city opened a new cinema, many people would like to go to this cinema. The cinema also gives out a poster indicating the movies’ ratings and descriptions.
+
+Please write a SQL query to output movies with an odd numbered ID and a description that is not 'boring'. Order the result by rating.
+
+For example, table `cinema`:
+
+```
++---------+-----------+--------------+-----------+
+|   id    | movie     |  description |  rating   |
++---------+-----------+--------------+-----------+
+|   1     | War       |   great 3D   |   8.9     |
+|   2     | Science   |   fiction    |   8.5     |
+|   3     | irish     |   boring     |   6.2     |
+|   4     | Ice song  |   Fantacy    |   8.6     |
+|   5     | House card|   Interesting|   9.1     |
++---------+-----------+--------------+-----------+
+```
+
+For the example above, the output should be:
+
+```
++---------+-----------+--------------+-----------+
+|   id    | movie     |  description |  rating   |
++---------+-----------+--------------+-----------+
+|   5     | House card|   Interesting|   9.1     |
+|   1     | War       |   great 3D   |   8.9     |
++---------+-----------+--------------+-----------+
+```
+
+### Solution
+
+```mysql
+SELECT *
+FROM cinema
+WHERE NOT id % 2 = 0 AND NOT description = 'boring'
+ORDER BY rating DESC
+;
+
+# or use mod function
+# WHERE NOT mod(id,2) = 0 AND NOT description = 'boring'
+```
+
+
+
+# 596. Classes More Than 5 Students
+
+https://leetcode.com/problems/classes-more-than-5-students/
+
+## Description
+
+There is a table `courses` with columns: **student** and **class**
+
+Please list out all classes which have more than or equal to 5 students.
+
+For example, the table:
+
+```
++---------+------------+
+| student | class      |
++---------+------------+
+| A       | Math       |
+| B       | English    |
+| C       | Math       |
+| D       | Biology    |
+| E       | Math       |
+| F       | Computer   |
+| G       | Math       |
+| H       | Math       |
+| I       | Math       |
++---------+------------+
+```
+
+Should output:
+
+```
++---------+
+| class   |
++---------+
+| Math    |
++---------+
+```
+
+ 
+
+**Note:**
+The students should not be counted duplicate in each course.
+
+## Solution
+
+```mysql
+SELECT class
+FROM courses
+GROUP BY class
+HAVING COUNT(DISTINCT student) >= 5
+;
+```
+
