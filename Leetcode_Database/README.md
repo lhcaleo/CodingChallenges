@@ -1,10 +1,38 @@
 # Solutions of Leetcode Database Problems
+<a id="markdown-solutions-of-leetcode-database-problems" name="solutions-of-leetcode-database-problems"></a>
+<!-- TOC -->
 
+- [Solutions of Leetcode Database Problems](#solutions-of-leetcode-database-problems)
+  - [175. Combine Two Tables](#175-combine-two-tables)
+    - [Description](#description)
+    - [Solution](#solution)
+  - [176. Second Highest Salary](#176-second-highest-salary)
+    - [Description](#description-1)
+    - [Solution](#solution-1)
+  - [595. Big Countries](#595-big-countries)
+    - [Description](#description-2)
+    - [Solution](#solution-2)
+  - [627. Swap Salary](#627-swap-salary)
+    - [Description](#description-3)
+    - [Solution](#solution-3)
+  - [620. Not Boring Movies](#620-not-boring-movies)
+    - [Description](#description-4)
+    - [Solution](#solution-4)
+  - [596. Classes More Than 5 Students](#596-classes-more-than-5-students)
+    - [Description](#description-5)
+    - [Solution](#solution-5)
+  - [182. Duplicate Emails](#182-duplicate-emails)
+    - [Description](#description-6)
+    - [Solution](#solution-6)
+
+<!-- /TOC -->
 ## 175. Combine Two Tables
+<a id="markdown-combine-two-tables" name="combine-two-tables"></a>
 
 https://leetcode.com/problems/combine-two-tables/description/
 
 ### Description
+<a id="markdown-description" name="description"></a>
 
 Table: `Person`
 
@@ -40,6 +68,7 @@ FirstName, LastName, City, State
 ```
 
 ### Solution
+<a id="markdown-solution" name="solution"></a>
 
 ```mysql
 SELECT FirstName, LastName, City, State
@@ -51,10 +80,12 @@ ON Person.PersonId = Address.PersonId
 
 
 ## 176. Second Highest Salary
+<a id="markdown-second-highest-salary" name="second-highest-salary"></a>
 
 https://leetcode.com/problems/second-highest-salary/description/
 
 ### Description
+<a id="markdown-description" name="description"></a>
 
 Write a SQL query to get the second highest salary from the `Employee` table.
 
@@ -79,6 +110,7 @@ For example, given the above Employee table, the query should return `200` as th
 ```
 
 ### Solution
+<a id="markdown-solution" name="solution"></a>
 
 ```mysql
 SELECT
@@ -121,10 +153,12 @@ WHERE Salary < (SELECT MAX(Salary) FROM Employee)
 
 
 ## 595. Big Countries
+<a id="markdown-big-countries" name="big-countries"></a>
 
 https://leetcode.com/problems/big-countries/
 
 ### Description
+<a id="markdown-description" name="description"></a>
 
 There is a table `World`
 
@@ -156,6 +190,7 @@ For example, according to the above table, we should output:
 ```
 
 ### Solution
+<a id="markdown-solution" name="solution"></a>
 
 ```mysql
 SELECT name, population, area
@@ -166,10 +201,12 @@ WHERE area > 3000000 OR population > 25000000
 
 
 ## 627. Swap Salary
+<a id="markdown-swap-salary" name="swap-salary"></a>
 
 https://leetcode.com/problems/swap-salary/
 
 ### Description
+<a id="markdown-description" name="description"></a>
 
 Given a table `salary`, such as the one below, that has m=male and f=female values. Swap all f and m values (i.e., change all f values to m and vice versa) with a **single update statement** and no intermediate temp table.
 
@@ -202,6 +239,7 @@ After running your **update** statement, the above salary table should have the 
 
 
 ### Solution
+<a id="markdown-solution" name="solution"></a>
 
 ```mysql
 UPDATE salary
@@ -234,10 +272,12 @@ SET sex = IF (sex = 'm', 'f', 'm')
 
 
 ## 620. Not Boring Movies
+<a id="markdown-not-boring-movies" name="not-boring-movies"></a>
 
 https://leetcode.com/problems/not-boring-movies/
 
 ### Description
+<a id="markdown-description" name="description"></a>
 
 X city opened a new cinema, many people would like to go to this cinema. The cinema also gives out a poster indicating the movies’ ratings and descriptions.
 
@@ -269,6 +309,7 @@ For the example above, the output should be:
 ```
 
 ### Solution
+<a id="markdown-solution" name="solution"></a>
 
 ```mysql
 SELECT *
@@ -283,11 +324,13 @@ ORDER BY rating DESC
 
 
 
-# 596. Classes More Than 5 Students
+## 596. Classes More Than 5 Students
+<a id="markdown-classes-more-than-5-students" name="classes-more-than-5-students"></a>
 
 https://leetcode.com/problems/classes-more-than-5-students/
 
-## Description
+### Description
+<a id="markdown-description" name="description"></a>
 
 There is a table `courses` with columns: **student** and **class**
 
@@ -326,13 +369,59 @@ Should output:
 **Note:**
 The students should not be counted duplicate in each course.
 
-## Solution
+### Solution
+<a id="markdown-solution" name="solution"></a>
 
 ```mysql
 SELECT class
 FROM courses
 GROUP BY class
 HAVING COUNT(DISTINCT student) >= 5
+;
+```
+
+
+
+## 182. Duplicate Emails
+<a id="markdown-duplicate-emails" name="duplicate-emails"></a>
+
+https://leetcode.com/problems/duplicate-emails/
+
+### Description
+<a id="markdown-description" name="description"></a>
+
+Write a SQL query to find all duplicate emails in a table named `Person`.
+
+```
++----+---------+
+| Id | Email   |
++----+---------+
+| 1  | a@b.com |
+| 2  | c@d.com |
+| 3  | a@b.com |
++----+---------+
+```
+
+For example, your query should return the following for the above table:
+
+```
++---------+
+| Email   |
++---------+
+| a@b.com |
++---------+
+```
+
+**Note**: All emails are in lowercase.
+
+### Solution
+<a id="markdown-solution" name="solution"></a>
+
+```mysql
+SELECT Email
+FROM Person
+GROUP BY Email
+HAVING COUNT(Email) > 1
 ;
 ```
 
