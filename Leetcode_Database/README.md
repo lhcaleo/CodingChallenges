@@ -30,6 +30,9 @@
   - [181. Employees Earning More Than Their Managers](#181-employees-earning-more-than-their-managers)
     - [Description](#description-8)
     - [Solution](#solution-8)
+  - [183. Customers Who Never Order](#183-customers-who-never-order)
+    - [Description](#description-9)
+    - [Solution](#solution-9)
 
 <!-- /TOC -->
 ## 175. Combine Two Tables
@@ -540,3 +543,72 @@ ON E1.ManagerId = E2.Id AND E1.Salary > E2.Salary
 ;
 ```
 
+## 183. Customers Who Never Order
+<a id="markdown-customers-who-never-order" name="customers-who-never-order"></a>
+https://leetcode.com/problems/customers-who-never-order/
+### Description
+Suppose that a website contains two tables, the `Customers` table and the `Orders` table. Write a SQL query to find all customers who never order anything.
+
+Table: `Customers`.
+
+```
++----+-------+
+| Id | Name  |
++----+-------+
+| 1  | Joe   |
+| 2  | Henry |
+| 3  | Sam   |
+| 4  | Max   |
++----+-------+
+```
+
+Table: `Orders`.
+
+```
++----+------------+
+| Id | CustomerId |
++----+------------+
+| 1  | 3          |
+| 2  | 1          |
++----+------------+
+```
+
+Using the above tables as example, return the following:
+
+```
++-----------+
+| Customers |
++-----------+
+| Henry     |
+| Max       |
++-----------+
+```
+
+### Solution
+<a id="markdown-solution" name="solution"></a>
+
+```mysql
+SELECT 
+    C.Name AS Customers
+FROM 
+    Customers C
+    LEFT JOIN Orders O
+    ON C.Id = O.CustomerId
+WHERE O.CustomerId IS NULL
+;
+```
+
+```mysql
+-- Or, use subquery
+SELECT
+    Name AS Customers
+FROM
+    Customers
+WHERE
+    Id NOT IN 
+    ( 
+        SELECT CustomerId 
+        FROM Orders 
+    )
+;
+```
