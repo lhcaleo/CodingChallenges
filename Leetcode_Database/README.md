@@ -6,33 +6,39 @@
   - [175. Combine Two Tables](#175-combine-two-tables)
     - [Description](#description)
     - [Solution](#solution)
-  - [176. Second Highest Salary](#176-second-highest-salary)
+  - [595. Big Countries](#595-big-countries)
     - [Description](#description-1)
     - [Solution](#solution-1)
-  - [595. Big Countries](#595-big-countries)
+  - [627. Swap Salary](#627-swap-salary)
     - [Description](#description-2)
     - [Solution](#solution-2)
-  - [627. Swap Salary](#627-swap-salary)
+  - [620. Not Boring Movies](#620-not-boring-movies)
     - [Description](#description-3)
     - [Solution](#solution-3)
-  - [620. Not Boring Movies](#620-not-boring-movies)
+  - [596. Classes More Than 5 Students](#596-classes-more-than-5-students)
     - [Description](#description-4)
     - [Solution](#solution-4)
-  - [596. Classes More Than 5 Students](#596-classes-more-than-5-students)
+  - [182. Duplicate Emails](#182-duplicate-emails)
     - [Description](#description-5)
     - [Solution](#solution-5)
-  - [182. Duplicate Emails](#182-duplicate-emails)
+  - [196. Delete Duplicate Emails](#196-delete-duplicate-emails)
     - [Description](#description-6)
     - [Solution](#solution-6)
-  - [196. Delete Duplicate Emails](#196-delete-duplicate-emails)
+  - [181. Employees Earning More Than Their Managers](#181-employees-earning-more-than-their-managers)
     - [Description](#description-7)
     - [Solution](#solution-7)
-  - [181. Employees Earning More Than Their Managers](#181-employees-earning-more-than-their-managers)
+  - [183. Customers Who Never Order](#183-customers-who-never-order)
     - [Description](#description-8)
     - [Solution](#solution-8)
-  - [183. Customers Who Never Order](#183-customers-who-never-order)
+  - [184. Department Highest Salary](#184-department-highest-salary)
     - [Description](#description-9)
     - [Solution](#solution-9)
+  - [176. Second Highest Salary](#176-second-highest-salary)
+    - [Description](#description-10)
+    - [Solution](#solution-10)
+  - [177. Nth Highest Salary](#177-nth-highest-salary)
+    - [Description](#description-11)
+    - [Solution](#solution-11)
 
 <!-- /TOC -->
 ## 175. Combine Two Tables
@@ -87,77 +93,6 @@ ON Person.PersonId = Address.PersonId
 ```
 
 
-
-## 176. Second Highest Salary
-<a id="markdown-second-highest-salary" name="second-highest-salary"></a>
-
-https://leetcode.com/problems/second-highest-salary/description/
-
-### Description
-<a id="markdown-description" name="description"></a>
-
-Write a SQL query to get the second highest salary from the `Employee` table.
-
-```
-+----+--------+
-| Id | Salary |
-+----+--------+
-| 1  | 100    |
-| 2  | 200    |
-| 3  | 300    |
-+----+--------+
-```
-
-For example, given the above Employee table, the query should return `200` as the second highest salary. If there is no second highest salary, then the query should return `null`.
-
-```
-+---------------------+
-| SecondHighestSalary |
-+---------------------+
-| 200                 |
-+---------------------+
-```
-
-### Solution
-<a id="markdown-solution" name="solution"></a>
-
-```mysql
-SELECT
-(
-    SELECT DISTINCT Salary
-    FROM Employee
-    ORDER BY Salary DESC
-    LIMIT 1,1) 
-AS SecondHighestSalary
-;
-```
-
-
-
-```mysql
-# The IFNULL() function returns a specified value if the expression is NULL.
-# If the expression is NOT NULL, this function returns the expression.
-SELECT
-    IFNULL
-    (
-        (SELECT DISTINCT Salary
-        FROM Employee
-        ORDER BY Salary DESC
-        LIMIT 1,1)
-        , NULL
-    )
-AS SecondHighestSalary
-;
-```
-
-
-
-```mysql
-SELECT MAX(Salary) AS SecondHighestSalary
-FROM Employee
-WHERE Salary < (SELECT MAX(Salary) FROM Employee)
-;
-```
 
 
 
@@ -547,6 +482,7 @@ ON E1.ManagerId = E2.Id AND E1.Salary > E2.Salary
 <a id="markdown-customers-who-never-order" name="customers-who-never-order"></a>
 https://leetcode.com/problems/customers-who-never-order/
 ### Description
+<a id="markdown-description" name="description"></a>
 Suppose that a website contains two tables, the `Customers` table and the `Orders` table. Write a SQL query to find all customers who never order anything.
 
 Table: `Customers`.
@@ -612,3 +548,203 @@ WHERE
     )
 ;
 ```
+
+
+
+## 184. Department Highest Salary
+<a id="markdown-department-highest-salary" name="department-highest-salary"></a>
+
+https://leetcode.com/problems/department-highest-salary/
+
+### Description
+<a id="markdown-description" name="description"></a>
+
+The `Employee` table holds all employees. Every employee has an Id, a salary, and there is also a column for the department Id.
+
+```
++----+-------+--------+--------------+
+| Id | Name  | Salary | DepartmentId |
++----+-------+--------+--------------+
+| 1  | Joe   | 70000  | 1            |
+| 2  | Jim   | 90000  | 1            |
+| 3  | Henry | 80000  | 2            |
+| 4  | Sam   | 60000  | 2            |
+| 5  | Max   | 90000  | 1            |
++----+-------+--------+--------------+
+```
+
+The `Department` table holds all departments of the company.
+
+```
++----+----------+
+| Id | Name     |
++----+----------+
+| 1  | IT       |
+| 2  | Sales    |
++----+----------+
+```
+
+Write a SQL query to find employees who have the highest salary in each of the departments. For the above tables, your SQL query should return the following rows (order of rows does not matter).
+
+```
++------------+----------+--------+
+| Department | Employee | Salary |
++------------+----------+--------+
+| IT         | Max      | 90000  |
+| IT         | Jim      | 90000  |
+| Sales      | Henry    | 80000  |
++------------+----------+--------+
+```
+
+**Explanation:**
+
+Max and Jim both have the highest salary in the IT department and Henry has the highest salary in the Sales department.
+
+### Solution
+<a id="markdown-solution" name="solution"></a>
+
+```mysql
+SELECT 
+    D.Name Department, 
+    E.Name Employee, 
+    E.Salary
+FROM 
+    Employee E, 
+    Department D,
+    ( SELECT DepartmentId, MAX(Salary) Salary
+        FROM Employee
+        GROUP BY DepartmentId ) M
+WHERE
+    E.DepartmentId = D.Id
+    AND E.DepartmentId = M.DepartmentId
+    AND E.Salary = M.Salary
+;
+```
+
+
+
+## 176. Second Highest Salary
+<a id="markdown-second-highest-salary" name="second-highest-salary"></a>
+
+
+https://leetcode.com/problems/second-highest-salary/description/
+
+### Description
+<a id="markdown-description" name="description"></a>
+
+
+Write a SQL query to get the second highest salary from the `Employee` table.
+
+```
++----+--------+
+| Id | Salary |
++----+--------+
+| 1  | 100    |
+| 2  | 200    |
+| 3  | 300    |
++----+--------+
+```
+
+For example, given the above Employee table, the query should return `200` as the second highest salary. If there is no second highest salary, then the query should return `null`.
+
+```
++---------------------+
+| SecondHighestSalary |
++---------------------+
+| 200                 |
++---------------------+
+```
+
+### Solution
+<a id="markdown-solution" name="solution"></a>
+
+
+```mysql
+SELECT
+(
+    SELECT DISTINCT Salary
+    FROM Employee
+    ORDER BY Salary DESC
+    LIMIT 1,1) 
+AS SecondHighestSalary
+;
+```
+
+
+
+```mysql
+# The IFNULL() function returns a specified value if the expression is NULL.
+# If the expression is NOT NULL, this function returns the expression.
+SELECT
+    IFNULL
+    (
+        (SELECT DISTINCT Salary
+        FROM Employee
+        ORDER BY Salary DESC
+        LIMIT 1,1)
+        , NULL
+    )
+AS SecondHighestSalary
+;
+```
+
+
+
+```mysql
+SELECT MAX(Salary) AS SecondHighestSalary
+FROM Employee
+WHERE Salary < (SELECT MAX(Salary) FROM Employee)
+;
+```
+
+
+
+## 177. Nth Highest Salary
+<a id="markdown-nth-highest-salary" name="nth-highest-salary"></a>
+
+https://leetcode.com/problems/nth-highest-salary/
+
+### Description
+<a id="markdown-description" name="description"></a>
+
+Write a SQL query to get the *n*th highest salary from the `Employee` table.
+
+```
++----+--------+
+| Id | Salary |
++----+--------+
+| 1  | 100    |
+| 2  | 200    |
+| 3  | 300    |
++----+--------+
+```
+
+For example, given the above Employee table, the *n*th highest salary where *n* = 2 is `200`. If there is no *n*th highest salary, then the query should return `null`.
+
+```
++------------------------+
+| getNthHighestSalary(2) |
++------------------------+
+| 200                    |
++------------------------+
+```
+
+### Solution
+<a id="markdown-solution" name="solution"></a>
+
+```mysql
+CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT
+
+BEGIN
+  SET N = N - 1;    -- index offset
+  RETURN 
+  (
+      SELECT DISTINCT 
+        Salary
+      FROM Employee
+      ORDER BY Salary DESC
+      LIMIT N, 1
+  );
+END
+```
+
