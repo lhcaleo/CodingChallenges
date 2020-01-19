@@ -27,6 +27,9 @@
   - [196. Delete Duplicate Emails](#196-delete-duplicate-emails)
     - [Description](#description-7)
     - [Solution](#solution-7)
+  - [181. Employees Earning More Than Their Managers](#181-employees-earning-more-than-their-managers)
+    - [Description](#description-8)
+    - [Solution](#solution-8)
 
 <!-- /TOC -->
 ## 175. Combine Two Tables
@@ -490,6 +493,50 @@ WHERE Id NOT IN -- delete rows that is not in the selection
        GROUP BY Email
    ) AS temp    -- use as temp table, to avoid error
 )
+;
+```
+
+
+
+## 181. Employees Earning More Than Their Managers
+<a id="markdown-employees-earning-more-than-their-managers" name="employees-earning-more-than-their-managers"></a>
+
+https://leetcode.com/problems/employees-earning-more-than-their-managers/
+
+### Description
+<a id="markdown-description" name="description"></a>
+
+The `Employee` table holds all employees including their managers. Every employee has an Id, and there is also a column for the manager Id.
+
+```
++----+-------+--------+-----------+
+| Id | Name  | Salary | ManagerId |
++----+-------+--------+-----------+
+| 1  | Joe   | 70000  | 3         |
+| 2  | Henry | 80000  | 4         |
+| 3  | Sam   | 60000  | NULL      |
+| 4  | Max   | 90000  | NULL      |
++----+-------+--------+-----------+
+```
+
+Given the `Employee` table, write a SQL query that finds out employees who earn more than their managers. For the above table, Joe is the only employee who earns more than his manager.
+
+```
++----------+
+| Employee |
++----------+
+| Joe      |
++----------+
+```
+
+### Solution
+<a id="markdown-solution" name="solution"></a>
+
+```mysql
+SELECT E1.NAME AS Employee
+FROM Employee E1
+INNER JOIN Employee E2
+ON E1.ManagerId = E2.Id AND E1.Salary > E2.Salary
 ;
 ```
 
