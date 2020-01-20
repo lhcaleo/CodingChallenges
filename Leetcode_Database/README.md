@@ -1,8 +1,8 @@
-# Solutions of Leetcode Database Problems
-<a id="markdown-solutions-of-leetcode-database-problems" name="solutions-of-leetcode-database-problems"></a>
+# Solutions of 15 Leetcode Database Problems
+<a id="markdown-solutions-of-15-leetcode-database-problems" name="solutions-of-15-leetcode-database-problems"></a>
 <!-- TOC -->
 
-- [Solutions of Leetcode Database Problems](#solutions-of-leetcode-database-problems)
+- [Solutions of 15 Leetcode Database Problems](#solutions-of-15-leetcode-database-problems)
   - [175. Combine Two Tables](#175-combine-two-tables)
     - [Description](#description)
     - [Solution](#solution)
@@ -39,6 +39,15 @@
   - [177. Nth Highest Salary](#177-nth-highest-salary)
     - [Description](#description-11)
     - [Solution](#solution-11)
+  - [178. Rank Scores](#178-rank-scores)
+    - [Description](#description-12)
+    - [Solution](#solution-12)
+  - [180. Consecutive Numbers](#180-consecutive-numbers)
+    - [Description](#description-13)
+    - [Solution](#solution-13)
+  - [626. Exchange Seats](#626-exchange-seats)
+    - [Description](#description-14)
+    - [Solution](#solution-14)
 
 <!-- /TOC -->
 ## 175. Combine Two Tables
@@ -746,5 +755,243 @@ BEGIN
       LIMIT N, 1
   );
 END
+```
+
+
+
+## 178. Rank Scores
+<a id="markdown-rank-scores" name="rank-scores"></a>
+
+https://leetcode.com/problems/rank-scores/
+
+### Description
+<a id="markdown-description" name="description"></a>
+
+Write a SQL query to rank scores. If there is a tie between two scores, both should have the same ranking. Note that after a tie, the next ranking number should be the next consecutive integer value. In other words, there should be no "holes" between ranks.
+
+```
++----+-------+
+| Id | Score |
++----+-------+
+| 1  | 3.50  |
+| 2  | 3.65  |
+| 3  | 4.00  |
+| 4  | 3.85  |
+| 5  | 4.00  |
+| 6  | 3.65  |
++----+-------+
+```
+
+For example, given the above `Scores` table, your query should generate the following report (order by highest score):
+
+```
++-------+------+
+| Score | Rank |
++-------+------+
+| 4.00  | 1    |
+| 4.00  | 1    |
+| 3.85  | 2    |
+| 3.65  | 3    |
+| 3.65  | 3    |
+| 3.50  | 4    |
++-------+------+
+```
+
+### Solution
+<a id="markdown-solution" name="solution"></a>
+
+```mysql
+-- To determine the ranking of a score, count the number of distinct scores that are >= to that score
+SELECT
+    S1.Score 'Score',
+    ( 
+        SELECT 
+            COUNT(DISTINCT Score) 
+         FROM Scores S2 
+         WHERE S2.Score >= S1.Score
+    ) AS 'Rank'
+FROM Scores S1
+ORDER BY Score DESC
+;
+```
+
+
+
+```mysql
+-- To determine the ranking of a score, count the number of distinct scores that are >= to that score
+SELECT
+    S1.Score 'Score',
+    COUNT(DISTINCT S2.Score) AS 'Rank'
+FROM Scores S1
+     INNER JOIN Scores S2
+     ON S2.Score >= S1.Score
+GROUP BY
+    S1.Id, S1.Score
+ORDER BY 
+    S1.Score DESC
+;
+```
+
+**Last solution with explaination**
+
+![image](https://assets.leetcode.com/users/sophiesu0827/image_1576871668.png)
+
+```mysql
+SELECT S1.Score, COUNT(S2.Score) AS Rank FROM Scores S1,
+(SELECT DISTINCT Score FROM Scores) AS S2
+WHERE S2.Score >= S1.Score
+GROUP BY S1.Id 
+ORDER BY S1.Score DESC
+;
+```
+
+
+
+## 180. Consecutive Numbers
+<a id="markdown-consecutive-numbers" name="consecutive-numbers"></a>
+
+https://leetcode.com/problems/consecutive-numbers/
+
+### Description
+<a id="markdown-description" name="description"></a>
+
+Write a SQL query to find all numbers that appear at least three times consecutively.
+
+```
++----+-----+
+| Id | Num |
++----+-----+
+| 1  |  1  |
+| 2  |  1  |
+| 3  |  1  |
+| 4  |  2  |
+| 5  |  1  |
+| 6  |  2  |
+| 7  |  2  |
++----+-----+
+```
+
+For example, given the above `Logs` table, `1` is the only number that appears consecutively for at least three times.
+
+```
++-----------------+
+| ConsecutiveNums |
++-----------------+
+| 1               |
++-----------------+
+```
+
+### Solution
+<a id="markdown-solution" name="solution"></a>
+
+```mysql
+SELECT
+    DISTINCT L1.Num AS ConsecutiveNums
+FROM
+    Logs L1,
+    Logs L2,
+    Logs L3
+WHERE L1.Id = L2.Id - 1 AND L2.Id = L3.Id - 1
+AND   L1.Num = L2.Num AND L2.Num = L3.Num
+;
+```
+
+
+
+## 626. Exchange Seats
+<a id="markdown-exchange-seats" name="exchange-seats"></a>
+
+https://leetcode.com/problems/exchange-seats/
+
+### Description
+<a id="markdown-description" name="description"></a>
+
+Mary is a teacher in a middle school and she has a table `seat` storing students' names and their corresponding seat ids.
+
+The column **id** is continuous increment.
+
+ 
+
+Mary wants to change seats for the adjacent students.
+
+ 
+
+Can you write a SQL query to output the result for Mary?
+
+ 
+
+```
++---------+---------+
+|    id   | student |
++---------+---------+
+|    1    | Abbot   |
+|    2    | Doris   |
+|    3    | Emerson |
+|    4    | Green   |
+|    5    | Jeames  |
++---------+---------+
+```
+
+For the sample input, the output is:
+
+ 
+
+```
++---------+---------+
+|    id   | student |
++---------+---------+
+|    1    | Doris   |
+|    2    | Abbot   |
+|    3    | Green   |
+|    4    | Emerson |
+|    5    | Jeames  |
++---------+---------+
+```
+
+**Note:**
+If the number of students is odd, there is no need to change the last one's seat.
+
+### Solution
+<a id="markdown-solution" name="solution"></a>
+
+**Use Multiple Union**
+
+```mysql
+# Even id: id - 1
+# eg 2,4,6,... to 1,3,5,...
+SELECT
+    s1.id - 1 AS id,
+    s1.student
+FROM
+    seat s1
+WHERE
+    MOD(s1.id, 2) = 0 
+    
+UNION
+
+# Odd id，id + 1. if the largest id is odd, then ignore
+# eg 1,3,5,... to 2,4,6,...
+SELECT
+    s2.id + 1 AS id,
+    s2.student
+FROM
+    seat s2
+WHERE
+    MOD(s2.id, 2) = 1
+    AND s2.id != ( SELECT max( s3.id ) FROM seat s3 ) 
+    
+UNION
+
+# If largest id is odd, take this out
+SELECT
+    s4.id AS id,
+    s4.student
+FROM
+    seat s4
+WHERE
+    MOD(s4.id, 2) = 1
+    AND s4.id = ( SELECT max( s5.id ) FROM seat s5 )
+ORDER BY id
+;
 ```
 
