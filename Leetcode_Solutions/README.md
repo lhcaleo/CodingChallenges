@@ -19,6 +19,7 @@
 | 7    | [Reverse Integer](https://leetcode.com/problems/reverse-integer/) | Easy       |
 | 206  | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Easy       |
 | 344  | [Reverse String](https://leetcode.com/problems/reverse-string/) | Easy       |
+| 912  | [Sort an Array](https://leetcode.com/problems/sort-an-array/) | Medium     |
 | 20   | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | Easy       |
 | 716  | [Max Stack](https://leetcode.com/articles/max-stack/)        | Easy       |
 | 155  | [Min Stack](https://leetcode.com/problems/min-stack/)        | Easy       |
@@ -58,7 +59,9 @@
 | 78   | [Subsets](https://leetcode.com/problems/subsets/)            | Medium     |
 | 169  | [Majority Element](https://leetcode.com/problems/majority-element/) | Easy       |
 
-Total # = 52
+
+
+Total # = 53
 
 TODO: subsets II, permutation II, combination sum, combination sum II, N queens, Path Sum II
 

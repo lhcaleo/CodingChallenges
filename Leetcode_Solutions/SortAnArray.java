@@ -1,5 +1,3 @@
-import javax.naming.ldap.*;
-
 // Bubble Sort
 {
 	public List<Integer> sortArray(int[] nums) 
@@ -92,6 +90,65 @@ import javax.naming.ldap.*;
 			nums[start + c] = temp[c];
 		}
 	}    
+	
+	private List<Integer> arrayToList(int[] nums)
+	{
+		List<Integer> result = new ArrayList<>();
+		for (int num: nums)
+		{
+			result.add(num);
+		}
+		return result;
+	}
+}
+
+// quick sort, in this case faster than merge sort
+// however, quick sort is not stable
+class Solution 
+{
+	public List<Integer> sortArray(int[] nums) 
+	{
+		if (nums.length == 0 || nums.length == 1) 
+			return arrayToList(nums);     
+		
+		quickSort(nums, 0, nums.length - 1);
+		return arrayToList(nums);
+	}
+	
+	private void quickSort(int[] nums, int start, int end)
+	{
+		if (start >= end) return;
+		
+		int pivot_index = partition(nums, start, end);
+		quickSort(nums, start, pivot_index - 1);
+		quickSort(nums, pivot_index + 1, end);
+	}
+	
+	private int partition(int[] nums, int start, int end)
+	{
+		int pivot = nums[start];
+		int k = start + 1;
+		
+		int swapTemp = 0;
+		
+		for (int i = start + 1; i <= end; i++)
+		{
+			if (nums[i] < pivot)
+			{
+				swapTemp = nums[i];
+				nums[i] = nums[k];
+				nums[k] = swapTemp;
+				k++;
+			}
+		}
+		
+		k--;
+		
+		swapTemp = nums[start];
+		nums[start] = nums[k];
+		nums[k] = swapTemp;
+		return k;
+	}
 	
 	private List<Integer> arrayToList(int[] nums)
 	{
