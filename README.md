@@ -6,7 +6,7 @@
 ## Algorithms
 
 - [Sorting](https://github.com/lhcaleo/CodingChallenges/tree/master/Sorting_Algorithms)
-- [Two Pointer]()
+- [Two Pointer](https://github.com/lhcaleo/CodingChallenges/blob/master/Leetcode_Solutions/two_pointer.md)
 
 ## LeetCode Problems
 - [LeetCode](https://github.com/lhcaleo/CodingChallenges/tree/master/Leetcode_Solutions)
