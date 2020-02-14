@@ -23,6 +23,7 @@
 | 912  | [Sort an Array](https://leetcode.com/problems/sort-an-array/) | Medium     |
 | 215  | [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | Medium     |
 | 347  | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | Medium     |
+| 451  | [Sort Characters By Frequency](https://leetcode.com/problems/sort-characters-by-frequency/) | Medium     |
 |      |                                                              |            |
 | 20   | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | Easy       |
 | 716  | [Max Stack](https://leetcode.com/articles/max-stack/)        | Easy       |
