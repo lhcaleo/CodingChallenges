@@ -1,5 +1,20 @@
-# Programming Challenges
-## Kattis Contest Problems
-- Development of programming skills on tricky challenges, games and puzzles by means of programming competitions.
+# CS Notes
+## Data Structures
+
+- [HashMap](https://github.com/lhcaleo/CodingChallenges/blob/master/Data_Structures/Hash_Table.md)
+
+## Algorithms
+
+- [Sorting](https://github.com/lhcaleo/CodingChallenges/tree/master/Sorting_Algorithms)
+
 ## LeetCode Problems
-- Leetcode solutions with time/space complexity and explanatory comments.
+- [LeetCode](https://github.com/lhcaleo/CodingChallenges/tree/master/Leetcode_Solutions)
+
+## LeetCode Databases
+
+- [Databases](https://github.com/lhcaleo/CodingChallenges/tree/master/Leetcode_Database)
+
+## Kattis Contest Problems
+
+- [Kattis](https://github.com/lhcaleo/CodingChallenges/tree/master/Kattis_Problems)
+
