@@ -35,6 +35,7 @@
 | 88   | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | Easy       |
 | 141  | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | Easy       |
 | 167  | [Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | Easy       |
+| 633  | [Sum of Square Numbers](https://leetcode.com/problems/sum-of-square-numbers/) | Easy       |
 |      |                                                              |            |
 | 21   | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Easy       |
 | 153  | [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | Medium     |
@@ -70,7 +71,7 @@
 
 
 
-Total # = 58
+Total # = 59
 
 TODO: subsets II, permutation II, combination sum, combination sum II, N queens, Path Sum II
 

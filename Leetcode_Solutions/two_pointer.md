@@ -64,23 +64,23 @@ class Solution
         int i = m - 1;     // from end of nums1
         int j = n - 1;     // from end of nums2
         int k = m + n - 1; // from end of merged array
-        while(i >= 0 && j >= 0)
-		{
+        while (i >= 0 && j >= 0)
+				{
             // if element in nums1 is greater than the element in nums2
             // store it into merged array
             // and then compare its left element with that element
-            if(nums1[i] > nums2[j])
-			    nums1[k--] = nums1[i--];
+            if (nums1[i] > nums2[j])
+              nums1[k--] = nums1[i--];
             // if element in nums1 is smaller or equal to the element in nums2
             // store the element in nums2 into merged array
             // and them compare the left element of that greater element in nums2
-			else
-                nums1[k--] = nums2[j--];
-		}
-        // store the rest elements in nums2 into sorted array
-		while(j >= 0)
+						else
+              nums1[k--] = nums2[j--];
+				}
+        		// store the rest elements in nums2 into sorted array
+				while (j >= 0)
         {
-            nums1[k--] = nums2[j--];
+          nums1[k--] = nums2[j--];
         }
     }
 }
@@ -170,7 +170,7 @@ public class Solution
 
 **Two pointer with different speed**
 
-```
+```java
 /**
  * https://leetcode.com/problems/linked-list-cycle/
  * Two pointer with different speed
@@ -282,8 +282,61 @@ class Solution
 ### <u>Description</u>
 <a id="markdown-description" name="description"></a>
 
+Given a non-negative integer `c`, your task is to decide whether there're two integers `a` and `b` such that a2 + b2 = c.
+
+**Example 1:**
+
+```
+Input: 5
+Output: True
+Explanation: 1 * 1 + 2 * 2 = 5
+```
+
+ 
+
+**Example 2:**
+
+```
+Input: 3
+Output: False
+```
+
 ### <u>Solution</u>
 <a id="markdown-solution" name="solution"></a>
+
+```java
+// Two Pointer
+// Time: O(n) Space: O(1)
+class Solution 
+{
+    public boolean judgeSquareSum(int c) 
+    {
+        int left = 0;
+        int right = (int) Math.sqrt(c);
+        int sum = 0;
+        
+        while (left <= right)
+        {
+            sum = left * left + right * right;
+            if (sum == c)
+            {
+                return true;
+            }
+            else if (sum < c) 
+            {
+                left++;
+            }
+            else 
+            {
+                right--;
+            }
+        }
+        return false;
+    }
+}
+```
+
+
 
 ## 345. Reverse Vowels of a String (Easy)
 <a id="markdown-reverse-vowels-of-a-string-easy" name="reverse-vowels-of-a-string-easy"></a>
