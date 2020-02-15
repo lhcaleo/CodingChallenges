@@ -344,8 +344,76 @@ class Solution
 ### <u>Description</u>
 <a id="markdown-description" name="description"></a>
 
+Write a function that takes a string as input and reverse only the vowels of a string.
+
+**Example 1:**
+
+```
+Input: "hello"
+Output: "holle"
+```
+
+**Example 2:**
+
+```
+Input: "leetcode"
+Output: "leotcede"
+```
+
+**Note:**
+The vowels does not include the letter "y".
+
 ### <u>Solution</u>
 <a id="markdown-solution" name="solution"></a>
+
+```java
+// Two Pointer 
+// Time: O(n) Space: O(1) constant
+
+class Solution 
+{
+    // use a HashSet to reduce the look up time to O(1)
+    private final static HashSet<Character> vowels = new HashSet<>(
+        Arrays.asList('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'));
+    
+    public String reverseVowels(String s) 
+    {
+        if (s == null)
+            return null;
+        int left = 0;
+        int right = s.length() - 1;
+        
+        char[] result = new char[s.length()];
+        
+        while (left <= right)
+        {
+            char cLeft = s.charAt(left);
+            char cRight = s.charAt(right);
+            
+            if (!vowels.contains(cLeft))
+            {
+                result[left] = cLeft;
+                left++;
+            }
+            else if (!vowels.contains(cRight))
+            {
+                result[right] = cRight;
+                right--;
+            }
+            else 
+            {
+                result[left] = cRight;
+                result[right] = cLeft;
+                left++;
+                right--;
+            }
+        }
+        return new String(result);
+    }
+}
+```
+
+
 
 ## 680. Valid Palindrome II (Easy)
 <a id="markdown-valid-palindrome-ii-easy" name="valid-palindrome-ii-easy"></a>

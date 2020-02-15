@@ -24,7 +24,7 @@
 | 347  | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | Medium     |
 | 451  | [Sort Characters By Frequency](https://leetcode.com/problems/sort-characters-by-frequency/) | Medium     |
 | 75   | [Sort Colors](https://leetcode.com/problems/sort-colors/)    | Medium     |
-|      |                                                              |            |
+|      | **------------------------------**                           |            |
 | 20   | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | Easy       |
 | 716  | [Max Stack](https://leetcode.com/articles/max-stack/)        | Easy       |
 | 155  | [Min Stack](https://leetcode.com/problems/min-stack/)        | Easy       |
@@ -36,7 +36,8 @@
 | 141  | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | Easy       |
 | 167  | [Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | Easy       |
 | 633  | [Sum of Square Numbers](https://leetcode.com/problems/sum-of-square-numbers/) | Easy       |
-|      |                                                              |            |
+| 345  | [Reverse Vowels of a String](https://leetcode.com/problems/reverse-vowels-of-a-string/) | Easy       |
+|      | **------------------------------**                           |            |
 | 21   | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Easy       |
 | 153  | [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | Medium     |
 | 74   | [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) | Medium     |
@@ -45,6 +46,7 @@
 | 144  | [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/) | Medium     |
 | 94   | [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) | Medium     |
 | 145  | [Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/) | Hard       |
+|      | **------------------------------**                           |            |
 |      | **Recursion + Binary Tree**                                  |            |
 | 104  | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | Easy       |
 | 110  | [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/) | Easy       |
@@ -71,7 +73,7 @@
 
 
 
-Total # = 59
+Total # = 60
 
 TODO: subsets II, permutation II, combination sum, combination sum II, N queens, Path Sum II
 
