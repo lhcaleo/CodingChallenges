@@ -2,36 +2,36 @@
 <!-- TOC -->
 
 - [88. Merge Sorted Array (Easy)](#88-merge-sorted-array-easy)
+	- [<u>Description</u>](#udescriptionu)
+	- [<u>Solution</u>](#usolutionu)
+- [141. Linked List Cycle (Easy)](#141-linked-list-cycle-easy)
+	- [<u>Description</u>](#udescriptionu-1)
+	- [<u>Solution</u>](#usolutionu-1)
+- [524. Longest Word in Dictionary through Deleting (Medium)](#524-longest-word-in-dictionary-through-deleting-medium)
 	- [Description](#description)
 	- [Solution](#solution)
-- [141. Linked List Cycle (Easy)](#141-linked-list-cycle-easy)
+- [167. Two Sum II - Input array is sorted (Easy)](#167-two-sum-ii---input-array-is-sorted-easy)
 	- [Description](#description-1)
 	- [Solution](#solution-1)
-- [524. Longest Word in Dictionary through Deleting (Medium)](#524-longest-word-in-dictionary-through-deleting-medium)
+- [633. Sum of Square Numbers (Easy)](#633-sum-of-square-numbers-easy)
 	- [Description](#description-2)
 	- [Solution](#solution-2)
-- [167. Two Sum II - Input array is sorted (Easy)](#167-two-sum-ii---input-array-is-sorted-easy)
+- [345. Reverse Vowels of a String (Easy)](#345-reverse-vowels-of-a-string-easy)
 	- [Description](#description-3)
 	- [Solution](#solution-3)
-- [633. Sum of Square Numbers (Easy)](#633-sum-of-square-numbers-easy)
+- [680. Valid Palindrome II (Easy)](#680-valid-palindrome-ii-easy)
 	- [Description](#description-4)
 	- [Solution](#solution-4)
-- [345. Reverse Vowels of a String (Easy)](#345-reverse-vowels-of-a-string-easy)
-	- [Description](#description-5)
-	- [Solution](#solution-5)
-- [680. Valid Palindrome II (Easy)](#680-valid-palindrome-ii-easy)
-	- [Description](#description-6)
-	- [Solution](#solution-6)
 
 <!-- /TOC -->
 
 Idea: Use two pointers to iterate an array, each points to different element.
 
-### 88. Merge Sorted Array (Easy)
+## 88. Merge Sorted Array (Easy)
 <a id="markdown-merge-sorted-array-easy" name="merge-sorted-array-easy"></a>
 
-#### <u>Description</u>
-<a id="markdown-description" name="description"></a>
+### <u>Description</u>
+<a id="markdown-udescriptionu" name="udescriptionu"></a>
 
 Given two sorted integer arrays *nums1* and *nums2*, merge *nums2* into *nums1* as one sorted array.
 
@@ -50,8 +50,8 @@ nums2 = [2,5,6],       n = 3
 Output: [1,2,2,3,5,6]
 ```
 
-#### <u>Solution</u>
-<a id="markdown-solution" name="solution"></a>
+### <u>Solution</u>
+<a id="markdown-usolutionu" name="usolutionu"></a>
 
 ```java
 // https://leetcode.com/problems/merge-sorted-array/submissions/
@@ -88,11 +88,11 @@ class Solution
 
 
 
-### 141. Linked List Cycle (Easy)
+## 141. Linked List Cycle (Easy)
 <a id="markdown-linked-list-cycle-easy" name="linked-list-cycle-easy"></a>
 
-#### <u>Description</u>
-<a id="markdown-description" name="description"></a>
+### <u>Description</u>
+<a id="markdown-udescriptionu" name="udescriptionu"></a>
 
 Given a linked list, determine if it has a cycle in it.
 
@@ -136,8 +136,8 @@ Explanation: There is no cycle in the linked list.
 
 Can you solve it using *O(1)* (i.e. constant) memory?
 
-#### <u>Solution</u>
-<a id="markdown-solution" name="solution"></a>
+### <u>Solution</u>
+<a id="markdown-usolutionu" name="usolutionu"></a>
 
 **Solution using set**
 
@@ -205,19 +205,19 @@ public class Solution
 
 
 
-### 524. Longest Word in Dictionary through Deleting (Medium)
+## 524. Longest Word in Dictionary through Deleting (Medium)
 <a id="markdown-longest-word-in-dictionary-through-deleting-medium" name="longest-word-in-dictionary-through-deleting-medium"></a>
 
-#### Description
+### <u>Description</u>
 <a id="markdown-description" name="description"></a>
 
-#### Solution
+### <u>Solution</u>
 <a id="markdown-solution" name="solution"></a>
 
-### 167. Two Sum II - Input array is sorted (Easy)
+## 167. Two Sum II - Input array is sorted (Easy)
 <a id="markdown-two-sum-ii---input-array-is-sorted-easy" name="two-sum-ii---input-array-is-sorted-easy"></a>
 
-#### Description
+### <u>Description</u>
 <a id="markdown-description" name="description"></a>
 
 Given an array of integers that is already ***sorted in ascending order\***, find two numbers such that they add up to a specific target number.
@@ -237,7 +237,7 @@ Output: [1,2]
 Explanation: The sum of 2 and 7 is 9. Therefore index1 = 1, index2 = 2.
 ```
 
-#### Solution
+### <u>Solution</u>
 <a id="markdown-solution" name="solution"></a>
 
 ```java
@@ -276,30 +276,30 @@ class Solution
 
 
 
-### 633. Sum of Square Numbers (Easy)
+## 633. Sum of Square Numbers (Easy)
 <a id="markdown-sum-of-square-numbers-easy" name="sum-of-square-numbers-easy"></a>
 
-#### Description
+### <u>Description</u>
 <a id="markdown-description" name="description"></a>
 
-#### Solution
+### <u>Solution</u>
 <a id="markdown-solution" name="solution"></a>
 
-### 345. Reverse Vowels of a String (Easy)
+## 345. Reverse Vowels of a String (Easy)
 <a id="markdown-reverse-vowels-of-a-string-easy" name="reverse-vowels-of-a-string-easy"></a>
 
-#### Description
+### <u>Description</u>
 <a id="markdown-description" name="description"></a>
 
-#### Solution
+### <u>Solution</u>
 <a id="markdown-solution" name="solution"></a>
 
-### 680. Valid Palindrome II (Easy)
+## 680. Valid Palindrome II (Easy)
 <a id="markdown-valid-palindrome-ii-easy" name="valid-palindrome-ii-easy"></a>
 
-#### Description
+### <u>Description</u>
 <a id="markdown-description" name="description"></a>
 
-#### Solution
+### <u>Solution</u>
 <a id="markdown-solution" name="solution"></a>
 
