@@ -38,6 +38,7 @@
 | 633  | [Sum of Square Numbers](https://leetcode.com/problems/sum-of-square-numbers/) | Easy       |
 | 345  | [Reverse Vowels of a String](https://leetcode.com/problems/reverse-vowels-of-a-string/) | Easy       |
 | 680  | [Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/) | Easy       |
+| 524  | [Longest Word in Dictionary through Deleting](https://leetcode.com/problems/longest-word-in-dictionary-through-deleting/) | Medium     |
 |      | **------------------------------**                           |            |
 | 21   | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Easy       |
 | 153  | [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | Medium     |
@@ -73,7 +74,13 @@
 
 
 
-Total # = 60
+**TOTAL # = 62**
+
+
+
+
+
+
 
 TODO: subsets II, permutation II, combination sum, combination sum II, N queens, Path Sum II
 

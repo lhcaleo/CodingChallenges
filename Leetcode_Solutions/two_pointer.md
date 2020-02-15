@@ -1,4 +1,4 @@
-**Two Pointer**
+# Two Pointer
 <!-- TOC -->
 
 - [88. Merge Sorted Array (Easy)](#88-merge-sorted-array-easy)
@@ -25,7 +25,9 @@
 
 <!-- /TOC -->
 
-Idea: Use two pointers to iterate an array, each points to different element.
+**<u>Idea: Use two pointers to iterate an array, each points to different element.</u>**
+
+
 
 ## 88. Merge Sorted Array (Easy)
 <a id="markdown-merge-sorted-array-easy" name="merge-sorted-array-easy"></a>
@@ -211,8 +213,85 @@ public class Solution
 ### <u>Description</u>
 <a id="markdown-description" name="description"></a>
 
+Given a string and a string dictionary, find the longest string in the dictionary that can be formed by deleting some characters of the given string. If there are more than one possible results, return the longest word with the smallest lexicographical order. If there is no possible result, return the empty string.
+
+**Example 1:**
+
+```
+Input:
+s = "abpcplea", d = ["ale","apple","monkey","plea"]
+
+Output: 
+"apple"
+```
+
+
+
+
+
+**Example 2:**
+
+```
+Input:
+s = "abpcplea", d = ["a","b","c"]
+
+Output: 
+"a"
+```
+
+
+
+**Note:**
+
+1. All the strings in the input will only contain lower-case letters.
+2. The size of the dictionary won't exceed 1,000.
+3. The length of all the strings in the input won't exceed 1,000.
+
 ### <u>Solution</u>
 <a id="markdown-solution" name="solution"></a>
+
+```java
+// Two Pointer with subStr()
+// Time: O(s*d)  Space: O(1) 
+class Solution 
+{
+    public String findLongestWord(String s, List<String> d) 
+    {
+        String longest = "";
+        for (String str: d)
+        {
+            int l1 = longest.length();
+            int l2 = str.length();
+            // if str is shorter than longest word, or same length with smaller order
+            if (l1 > l2 || (l1 == l2) && (longest.compareTo(str) < 0))
+            {
+                continue;
+            }
+            if (isSubstr(s, str))
+            {
+                longest = str;
+            }
+        }
+        return longest;
+    }
+    private boolean isSubstr(String s, String str)
+    {
+        int i = 0;
+        int j = 0;
+        while (i < s.length() && j < str.length())
+        {
+            if (s.charAt(i) == str.charAt(j))
+            {
+                j++;
+            }
+            i++;
+        }
+        return j == str.length();
+    }
+}
+```
+
+
 
 ## 167. Two Sum II - Input array is sorted (Easy)
 <a id="markdown-two-sum-ii---input-array-is-sorted-easy" name="two-sum-ii---input-array-is-sorted-easy"></a>
