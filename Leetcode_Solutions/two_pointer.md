@@ -30,7 +30,7 @@ Idea: Use two pointers to iterate an array, each points to different element.
 ### 88. Merge Sorted Array (Easy)
 <a id="markdown-merge-sorted-array-easy" name="merge-sorted-array-easy"></a>
 
-#### Description
+#### <u>Description</u>
 <a id="markdown-description" name="description"></a>
 
 Given two sorted integer arrays *nums1* and *nums2*, merge *nums2* into *nums1* as one sorted array.
@@ -50,7 +50,7 @@ nums2 = [2,5,6],       n = 3
 Output: [1,2,2,3,5,6]
 ```
 
-#### Solution
+#### <u>Solution</u>
 <a id="markdown-solution" name="solution"></a>
 
 ```java
@@ -91,7 +91,7 @@ class Solution
 ### 141. Linked List Cycle (Easy)
 <a id="markdown-linked-list-cycle-easy" name="linked-list-cycle-easy"></a>
 
-#### Description
+#### <u>Description</u>
 <a id="markdown-description" name="description"></a>
 
 Given a linked list, determine if it has a cycle in it.
@@ -136,7 +136,7 @@ Explanation: There is no cycle in the linked list.
 
 Can you solve it using *O(1)* (i.e. constant) memory?
 
-#### Solution
+#### <u>Solution</u>
 <a id="markdown-solution" name="solution"></a>
 
 **Solution using set**
@@ -220,8 +220,61 @@ public class Solution
 #### Description
 <a id="markdown-description" name="description"></a>
 
+Given an array of integers that is already ***sorted in ascending order\***, find two numbers such that they add up to a specific target number.
+
+The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2.
+
+**Note:**
+
+- Your returned answers (both index1 and index2) are not zero-based.
+- You may assume that each input would have *exactly* one solution and you may not use the *same* element twice.
+
+**Example:**
+
+```
+Input: numbers = [2,7,11,15], target = 9
+Output: [1,2]
+Explanation: The sum of 2 and 7 is 9. Therefore index1 = 1, index2 = 2.
+```
+
 #### Solution
 <a id="markdown-solution" name="solution"></a>
+
+```java
+// Two Pointer
+// Time: O(n) Space: O(1)
+class Solution 
+{
+    public int[] twoSum(int[] numbers, int target) 
+    {
+        int left = 0;
+        int right = numbers.length - 1;
+        int sum = 0;
+        
+        while(left < right)
+        {
+            sum = numbers[left] + numbers[right];
+            if (sum == target)
+            {
+                break;
+            }
+            else if (sum > target)
+            {
+                right--;
+            }
+            // sum < target
+            else 
+            {
+                left++;
+            }
+        }
+        
+        return new int[]{left + 1, right + 1};
+    }
+}
+```
+
+
 
 ### 633. Sum of Square Numbers (Easy)
 <a id="markdown-sum-of-square-numbers-easy" name="sum-of-square-numbers-easy"></a>

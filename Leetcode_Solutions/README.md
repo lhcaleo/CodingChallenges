@@ -15,7 +15,6 @@
 | 27   | [Remove Element](https://leetcode.com/problems/remove-element/) | Easy       |
 | 237  | [Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/) | Easy       |
 | 28   | [Implement strStr()](https://leetcode.com/problems/implement-strstr/) | Easy       |
-| 141  | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | Easy       |
 | 7    | [Reverse Integer](https://leetcode.com/problems/reverse-integer/) | Easy       |
 | 206  | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Easy       |
 | 344  | [Reverse String](https://leetcode.com/problems/reverse-string/) | Easy       |
@@ -32,7 +31,11 @@
 | 704  | [Binary Search](https://leetcode.com/problems/binary-search/) | Easy       |
 | 69   | [Sqrt(x)](https://leetcode.com/problems/sqrtx/)              | Easy       |
 | 26   | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | Easy       |
+|      | **Two Pointer**                                              |            |
 | 88   | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | Easy       |
+| 141  | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | Easy       |
+| 167  | [Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | Easy       |
+|      |                                                              |            |
 | 21   | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Easy       |
 | 153  | [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | Medium     |
 | 74   | [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) | Medium     |
@@ -67,7 +70,7 @@
 
 
 
-Total # = 57
+Total # = 58
 
 TODO: subsets II, permutation II, combination sum, combination sum II, N queens, Path Sum II
 
