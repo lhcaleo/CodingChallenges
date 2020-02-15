@@ -18,7 +18,7 @@
 | 7    | [Reverse Integer](https://leetcode.com/problems/reverse-integer/) | Easy       |
 | 206  | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Easy       |
 | 344  | [Reverse String](https://leetcode.com/problems/reverse-string/) | Easy       |
-|      | **Sorting**                                                  |            |
+|      | **----------Sorting----------**                              |            |
 | 912  | [Sort an Array](https://leetcode.com/problems/sort-an-array/) | Medium     |
 | 215  | [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | Medium     |
 | 347  | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | Medium     |
@@ -31,23 +31,23 @@
 | 704  | [Binary Search](https://leetcode.com/problems/binary-search/) | Easy       |
 | 69   | [Sqrt(x)](https://leetcode.com/problems/sqrtx/)              | Easy       |
 | 26   | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | Easy       |
-|      | **Two Pointer**                                              |            |
+|      | **----------Two Pointer----------**                          |            |
 | 88   | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | Easy       |
 | 141  | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | Easy       |
 | 167  | [Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | Easy       |
 | 633  | [Sum of Square Numbers](https://leetcode.com/problems/sum-of-square-numbers/) | Easy       |
 | 345  | [Reverse Vowels of a String](https://leetcode.com/problems/reverse-vowels-of-a-string/) | Easy       |
+| 680  | [Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/) | Easy       |
 |      | **------------------------------**                           |            |
 | 21   | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Easy       |
 | 153  | [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | Medium     |
 | 74   | [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) | Medium     |
 | 240  | [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/) | Medium     |
-|      | **Binary Tree Traversal**                                    |            |
+|      | **----------Binary Tree Traversal----------**                |            |
 | 144  | [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/) | Medium     |
 | 94   | [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) | Medium     |
 | 145  | [Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/) | Hard       |
-|      | **------------------------------**                           |            |
-|      | **Recursion + Binary Tree**                                  |            |
+|      | **----------Recursion + Binary Tree----------**              |            |
 | 104  | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | Easy       |
 | 110  | [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/) | Easy       |
 | 543  | [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/) | Easy       |
