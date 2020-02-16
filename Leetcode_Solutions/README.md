@@ -28,8 +28,12 @@
 | 20   | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | Easy       |
 | 716  | [Max Stack](https://leetcode.com/articles/max-stack/)        | Easy       |
 | 155  | [Min Stack](https://leetcode.com/problems/min-stack/)        | Easy       |
+|      | **—————Binary Search----------**                             |            |
 | 704  | [Binary Search](https://leetcode.com/problems/binary-search/) | Easy       |
 | 69   | [Sqrt(x)](https://leetcode.com/problems/sqrtx/)              | Easy       |
+| 744  | [Find Smallest Letter Greater Than Target](https://leetcode.com/problems/find-smallest-letter-greater-than-target/) | Easy       |
+|      |                                                              |            |
+|      | **------------------------------**                           |            |
 | 26   | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | Easy       |
 |      | **----------Two Pointer----------**                          |            |
 | 88   | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | Easy       |
@@ -74,7 +78,7 @@
 
 
 
-**TOTAL # = 62**
+**TOTAL # = 63**
 
 
 
