@@ -32,6 +32,8 @@
 | 704  | [Binary Search](https://leetcode.com/problems/binary-search/) | Easy       |
 | 69   | [Sqrt(x)](https://leetcode.com/problems/sqrtx/)              | Easy       |
 | 744  | [Find Smallest Letter Greater Than Target](https://leetcode.com/problems/find-smallest-letter-greater-than-target/) | Easy       |
+| 540  | [Single Element in a Sorted Array](https://leetcode.com/problems/single-element-in-a-sorted-array/) | Medium     |
+| 278  | [First Bad Version](https://leetcode.com/problems/first-bad-version/) | Easy       |
 |      |                                                              |            |
 |      | **------------------------------**                           |            |
 | 26   | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | Easy       |
@@ -78,7 +80,7 @@
 
 
 
-**TOTAL # = 63**
+**TOTAL # = 65**
 
 
 
