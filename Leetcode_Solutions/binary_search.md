@@ -384,8 +384,63 @@ public class Solution extends VersionControl
 ### Description
 <a id="markdown-description" name="description"></a>
 
+Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
+
+(i.e.,  `[0,1,2,4,5,6,7]` might become  `[4,5,6,7,0,1,2]`).
+
+Find the minimum element.
+
+You may assume no duplicate exists in the array.
+
+**Example 1:**
+
+```
+Input: [3,4,5,1,2] 
+index:  0,1,2,3,4
+Output: 1
+```
+
+**Example 2:**
+
+```
+Input: [4,5,6,7,0,1,2]
+index:  0,1,2,3,4,5,6
+Output: 0
+```
+
 ### Solution
 <a id="markdown-solution" name="solution"></a>
+
+```java
+// Observation: since original array is sorted, if mid > end, then search [mid + 1, end]
+// Binary Search
+// Time: O(log n) Space: O(1)
+class Solution 
+{
+    public int findMin(int[] nums) 
+    {
+        int start = 0; 
+        int end = nums.length - 1;
+        int mid = 0;
+        
+        while (start < end)
+        {
+            mid = start + (end - start) / 2;
+            if (nums[mid] > nums[end])
+            {
+                start = mid + 1;
+            } 
+            else 
+            {
+                end = mid;
+            }
+        }
+        return nums[start];
+    }
+}
+```
+
+
 
 ## 34. Find First and Last Position of Element in Sorted Array (Medium)
 <a id="markdown-find-first-and-last-position-of-element-in-sorted-array-medium" name="find-first-and-last-position-of-element-in-sorted-array-medium"></a>
