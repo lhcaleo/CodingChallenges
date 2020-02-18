@@ -440,13 +440,112 @@ class Solution
 }
 ```
 
+## 33. Search in Rotated Sorted Array (Medium)
+
+### Description
+
+Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
+
+(i.e., `[0,1,2,4,5,6,7]` might become `[4,5,6,7,0,1,2]`).
+
+You are given a target value to search. If found in the array return its index, otherwise return `-1`.
+
+You may assume no duplicate exists in the array.
+
+Your algorithm's runtime complexity must be in the order of *O*(log *n*).
+
+**Example 1:**
+
+```
+Input: nums = [4,5,6,7,0,1,2], target = 0
+Output: 4
+```
+
+**Example 2:**
+
+```
+Input: nums = [4,5,6,7,0,1,2], target = 3
+Output: -1
+```
+
+### Solution
+
+```java
+class Solution 
+{
+    public int search(int[] nums, int target) 
+    {
+        if (nums == null || nums.length == 0)
+            return -1;
+        
+        int left = 0;
+        int right = nums.length - 1;
+        
+        while (left + 1 < right)
+        {
+            int mid = left + (right - left) / 2;
+            
+            if (nums[mid] == target)
+                return mid;
+
+            if (nums[left] < nums[mid]) 
+            {
+                if (nums[left] <= target && target <= nums[mid]) 
+                    right = mid - 1;
+                else 
+                    left = mid + 1;
+            }
+            else {
+                if (nums[mid] <= target && target <= nums[right]) {
+                    left = mid + 1;
+                } else {
+                    right = mid - 1;
+                }
+            }
+        }  
+        if (nums[left] == target)
+            return left;
+        if (nums[right] == target)
+            return right;
+        else
+            return -1;
+    }
+}
+```
+
 
 
 ## 34. Find First and Last Position of Element in Sorted Array (Medium)
+
 <a id="markdown-find-first-and-last-position-of-element-in-sorted-array-medium" name="find-first-and-last-position-of-element-in-sorted-array-medium"></a>
 
 ### Description
 <a id="markdown-description" name="description"></a>
 
+Given an array of integers `nums` sorted in ascending order, find the starting and ending position of a given `target` value.
+
+Your algorithm's runtime complexity must be in the order of *O*(log *n*).
+
+If the target is not found in the array, return `[-1, -1]`.
+
+**Example 1:**
+
+```
+Input: nums = [5,7,7,8,8,10], target = 8
+Output: [3,4]
+```
+
+**Example 2:**
+
+```
+Input: nums = [5,7,7,8,8,10], target = 6
+Output: [-1,-1]
+```
+
 ### Solution
 <a id="markdown-solution" name="solution"></a>
+
+```java
+
+```
+
