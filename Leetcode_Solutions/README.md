@@ -35,7 +35,8 @@
 | 540  | [Single Element in a Sorted Array](https://leetcode.com/problems/single-element-in-a-sorted-array/) | Medium     |
 | 278  | [First Bad Version](https://leetcode.com/problems/first-bad-version/) | Easy       |
 | 153  | [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | Medium     |
-|      |                                                              |            |
+| 33   | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | Medium     |
+| 34   | [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | Medium     |
 |      | **------------------------------**                           |            |
 | 26   | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | Easy       |
 |      | **----------Two Pointer----------**                          |            |
@@ -80,7 +81,7 @@
 
 
 
-**TOTAL # = 65**
+**TOTAL # = 66**
 
 
 
