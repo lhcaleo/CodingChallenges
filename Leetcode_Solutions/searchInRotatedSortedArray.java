@@ -22,14 +22,15 @@ class Solution
 				else 
 					left = mid + 1;
 			}
-			else {
-				if (nums[mid] <= target && target <= nums[right]) {
+			else 
+			{
+				if (nums[mid] <= target && target <= nums[right])
 					left = mid + 1;
-				} else {
+				else
 					right = mid - 1;
-				}
 			}
-		}  
+		}
+
 		if (nums[left] == target)
 			return left;
 		if (nums[right] == target)
