@@ -16,11 +16,12 @@
 | 237  | [Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/) | Easy       |
 | 28   | [Implement strStr()](https://leetcode.com/problems/implement-strstr/) | Easy       |
 | 7    | [Reverse Integer](https://leetcode.com/problems/reverse-integer/) | Easy       |
-| 206  | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Easy       |
 | 344  | [Reverse String](https://leetcode.com/problems/reverse-string/) | Easy       |
 |      | **----------List----------**                                 |            |
 | 160  | [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) | Easy       |
-|      |                                                              |            |
+| 206  | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Easy       |
+| 21   | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Easy       |
+| 83   | [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) | Easy       |
 |      |                                                              |            |
 |      | **----------Sorting----------**                              |            |
 | 912  | [Sort an Array](https://leetcode.com/problems/sort-an-array/) | Medium     |
@@ -52,7 +53,6 @@
 | 680  | [Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/) | Easy       |
 | 524  | [Longest Word in Dictionary through Deleting](https://leetcode.com/problems/longest-word-in-dictionary-through-deleting/) | Medium     |
 |      | **------------------------------**                           |            |
-| 21   | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Easy       |
 | 74   | [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) | Medium     |
 | 240  | [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/) | Medium     |
 |      | **----------Binary Tree Traversal----------**                |            |
@@ -85,7 +85,7 @@
 
 
 
-**TOTAL # = 67**
+**TOTAL # = 68**
 
 
 

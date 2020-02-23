@@ -190,6 +190,30 @@ Output: 1->1->2->3->4->4
 
 ### Solution
 
+**Recursive Solution**
+
+```java
+class Solution 
+{
+    public ListNode mergeTwoLists(ListNode l1, ListNode l2) 
+    {
+        if (l1 == null) return l2;
+        if (l2 == null) return l1;
+        
+        if (l1.val <= l2.val)
+        {
+            l1.next = mergeTwoLists(l1.next, l2);
+            return l1;
+        } else {
+            l2.next = mergeTwoLists(l1, l2.next);
+            return l2;
+        }
+    }
+}
+```
+
+**Iterative Solution with Dummy Head**
+
 ```java
 class Solution 
 {
@@ -216,6 +240,54 @@ class Solution
         else
             curr.next = l1;
         return dummyHead.next;
+    }
+}
+```
+
+## 83. Remove Duplicates from Sorted List
+
+### Description
+
+Given a sorted linked list, delete all duplicates such that each element appear only once.
+
+**Example 1:**
+
+```
+Input: 1->1->2
+Output: 1->2
+```
+
+**Example 2:**
+
+```
+Input: 1->1->2->3->3
+Output: 1->2->3
+```
+
+### Solution
+
+```java
+class Solution 
+{
+    public ListNode deleteDuplicates(ListNode head) 
+    {
+        ListNode curr = head;
+        
+        while(curr != null)
+        {
+            ListNode next = curr.next;
+            if (next == null)
+                return head;
+            else if (next.val == curr.val)
+            {
+                curr.next = next.next;
+                next.next = null;
+            } 
+            else
+                curr = curr.next;
+        }
+        
+        return head;
     }
 }
 ```
