@@ -18,6 +18,10 @@
 | 7    | [Reverse Integer](https://leetcode.com/problems/reverse-integer/) | Easy       |
 | 206  | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Easy       |
 | 344  | [Reverse String](https://leetcode.com/problems/reverse-string/) | Easy       |
+|      | **----------List----------**                                 |            |
+| 160  | [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) | Easy       |
+|      |                                                              |            |
+|      |                                                              |            |
 |      | **----------Sorting----------**                              |            |
 | 912  | [Sort an Array](https://leetcode.com/problems/sort-an-array/) | Medium     |
 | 215  | [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | Medium     |
@@ -81,7 +85,7 @@
 
 
 
-**TOTAL # = 66**
+**TOTAL # = 67**
 
 
 

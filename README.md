@@ -2,6 +2,7 @@
 ## Data Structures
 
 - [HashMap](https://github.com/lhcaleo/CodingChallenges/blob/master/Data_Structures/Hash_Table.md)
+- [Linked List](https://github.com/lhcaleo/CodingChallenges/blob/master/Leetcode_Solutions/list.md)
 
 ## Algorithms
 
