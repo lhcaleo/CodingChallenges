@@ -1,3 +1,26 @@
+class Solution 
+{
+	public ListNode reverseList(ListNode head) 
+	{
+		ListNode curr = head;
+		// if curr is null,
+		// if curr'next is null, it means it's the last node
+		//    which will become head of the reverse list.
+		if (curr == null || curr.next == null)
+			return curr;
+		
+		ListNode curr_next = curr.next;
+		ListNode newHead = reverseList(curr_next);
+		curr_next.next = curr;
+		curr.next = null;
+		
+		return newHead;
+	}
+}
+
+
+
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {

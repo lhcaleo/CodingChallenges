@@ -96,3 +96,80 @@ public class Solution
 }
 ```
 
+
+
+## 206. Reverse Linked List
+
+### Description
+
+Reverse a singly linked list.
+
+**Example:**
+
+```
+Input: 1->2->3->4->5->NULL
+Output: 5->4->3->2->1->NULL
+```
+
+**Follow up:**
+
+A linked list can be reversed either iteratively or recursively. Could you implement both?
+
+### Solution
+
+**Iterative Solution**
+
+```java
+class Solution 
+{
+	public ListNode reverseList(ListNode head) 
+    {
+		ListNode prev = null;
+		ListNode curr = head;
+		ListNode newHead = null;
+        
+		// stop when current node is null
+        while (curr != null)
+        {
+            newHead = curr.next;
+            // reverse the arrow
+            curr.next = prev;
+            // move two pointers forward
+            prev = curr;
+            curr = newHead;
+            
+        }
+        // return prev, since it's the last node
+        return prev;
+	}
+}
+```
+
+
+
+**Recursive Solution**
+
+```java
+class Solution 
+{
+    public ListNode reverseList(ListNode head) 
+    {
+        ListNode curr = head;
+        // if curr is null,
+		// if curr'next is null, it means it's the last node
+		//    which will become head of the reverse list.
+        if (curr == null || curr.next == null)
+            return curr;
+        
+        ListNode curr_next = curr.next;
+        ListNode newHead = reverseList(curr_next);
+        curr_next.next = curr;
+        curr.next = null;
+        
+        return newHead;
+    }
+}
+```
+
+
+
