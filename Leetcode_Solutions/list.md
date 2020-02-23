@@ -348,3 +348,50 @@ class Solution
 }
 ```
 
+
+
+## 24. Swap Nodes in Pairs
+
+### Description
+
+Given a linked list, swap every two adjacent nodes and return its head.
+
+You may **not** modify the values in the list's nodes, only nodes itself may be changed.
+
+**Example:**
+
+```
+Given 1->2->3->4, you should return the list as 2->1->4->3.
+```
+
+### Solution
+
+```java
+// Dummy Head with 3 pointers, prev, left, and right
+// Time: O(n) Space: O(1)
+class Solution 
+{
+    public ListNode swapPairs(ListNode head) 
+    {
+        ListNode dummyHead = new ListNode(-1);
+        dummyHead.next = head;
+        ListNode prev = dummyHead;
+        
+        while (prev.next != null && prev.next.next != null)
+        {
+            ListNode left = prev.next;
+            ListNode right = prev.next.next;
+            ListNode next = right.next;
+            
+            left.next = next;
+            right.next = left;
+            prev.next = right;
+            
+            prev = left;
+        }
+        
+        return dummyHead.next;
+    }
+}
+```
+
