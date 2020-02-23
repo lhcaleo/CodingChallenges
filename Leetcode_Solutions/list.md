@@ -292,3 +292,59 @@ class Solution
 }
 ```
 
+
+
+## 19. Remove Nth Node From End of List
+
+### Description
+
+Given a linked list, remove the n-th node from the end of list and return its head.
+
+**Example:**
+
+```
+Given linked list: 1->2->3->4->5, and n = 2.
+
+After removing the second node from the end, the linked list becomes 1->2->3->5.
+```
+
+**Note:**
+
+Given *n* will always be valid.
+
+**Follow up:**
+
+Could you do this in one pass?
+
+### Solution
+
+```java
+// Two Pointer, one fast, one slow
+// keep their gap at n, and move till the end
+// Time: O(n) Space: O(1)
+class Solution 
+{
+    public ListNode removeNthFromEnd(ListNode head, int n) 
+    {    
+        ListNode dummyHead = new ListNode(0);
+        dummyHead.next = head;
+        ListNode fast = dummyHead;
+        ListNode slow = dummyHead;
+        // Advances fast pointer so that the gap between fast and slow is n nodes apart
+        while(n > 0) {
+            fast = fast.next;
+            n--;
+        }
+        // Move fast to the end, maintaining the gap
+        while(fast.next != null) 
+        {
+            fast = fast.next;
+            slow = slow.next;
+        }
+        // Slow pointer's next node is the n-th node from the end of list
+        slow.next = slow.next.next;
+        return dummyHead.next;
+    }
+}
+```
+

@@ -22,7 +22,7 @@
 | 206  | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Easy       |
 | 21   | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Easy       |
 | 83   | [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) | Easy       |
-|      |                                                              |            |
+| 19   | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | Medium     |
 |      | **----------Sorting----------**                              |            |
 | 912  | [Sort an Array](https://leetcode.com/problems/sort-an-array/) | Medium     |
 | 215  | [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | Medium     |
@@ -85,7 +85,7 @@
 
 
 
-**TOTAL # = 68**
+**TOTAL # = 69**
 
 
 
