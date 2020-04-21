@@ -4,6 +4,8 @@ https://www.hackerearth.com/zh/practice/data-structures/hash-tables/basics-of-ha
 
 **Hash Table = an array of linked lists + a hash code function.**
 
+[HashMap Implementation](https://dzone.com/articles/custom-hashmap-implementation-in-java)
+
 ## Insert a (key, value) pair into Hash Table
 
 1. <u>Compute the key’s hash code</u>
