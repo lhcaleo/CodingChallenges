@@ -455,3 +455,152 @@ class Solution
 }
 ```
 
+## 234. Palindrome Linked List
+
+### Description
+
+Given a singly linked list, determine if it is a palindrome.
+
+**Example 1:**
+
+```
+Input: 1->2
+Output: false
+```
+
+**Example 2:**
+
+```
+Input: 1->2->2->1
+Output: true
+```
+
+**Follow up:**
+Could you do it in O(n) time and O(1) space?
+
+###Solution
+
+```java
+// Time: O(n) Space: O(1)
+// Two Pointer and Reverse list
+
+class Solution 
+{
+    public boolean isPalindrome(ListNode head) 
+    {
+        if (head == null || head.next == null) 
+            return true;
+        ListNode slow = head;
+        ListNode fast = head.next;
+        while (fast != null && fast.next != null)
+        {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        // even length, move slow one more step, 
+        // else odd length, slow is already in the mid
+        if (fast != null)
+            slow = slow.next;
+        // split to two lists
+        splitList(head, slow);
+        // compare first and reversed-second
+        return compareList(head, reverseList(slow));     
+    }
+    
+    private void splitList(ListNode head, ListNode end)
+    {
+        while (head.next != end)
+        {
+            head = head.next;
+        }
+        head.next = null;
+    }
+    
+    private ListNode reverseList(ListNode head) {
+        ListNode prev = null;
+        ListNode curr = head;
+        ListNode newHead = null;
+        // stop when head is null
+        while (curr != null)
+        {
+            newHead = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = newHead;
+        }
+        return prev;
+    }
+    
+    private boolean compareList(ListNode l1, ListNode l2)
+    {
+        while (l1 != null && l2 != null)
+        {
+            if (l1.val == l2.val) {
+                l1 = l1.next;
+                l2 = l2.next;
+            } else {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+```
+
+## 725. Split Linked List in Parts
+
+### Description
+
+Given a (singly) linked list with head node `root`, write a function to split the linked list into `k` consecutive linked list "parts".
+
+The length of each part should be as equal as possible: no two parts should have a size differing by more than 1. This may lead to some parts being null.
+
+The parts should be in order of occurrence in the input list, and parts occurring earlier should always have a size greater than or equal parts occurring later.
+
+Return a List of ListNode's representing the linked list parts that are formed.
+
+Examples 1->2->3->4, k = 5 // 5 equal parts [ [1], [2], [3], [4], null ]
+
+**Example 1:**
+
+```
+Input:
+root = [1, 2, 3], k = 5
+Output: [[1],[2],[3],[],[]]
+Explanation:
+The input and each element of the output are ListNodes, not arrays.
+For example, the input root has root.val = 1, root.next.val = 2, \root.next.next.val = 3, and root.next.next.next = null.
+The first element output[0] has output[0].val = 1, output[0].next = null.
+The last element output[4] is null, but it's string representation as a ListNode is [].
+```
+
+
+
+**Example 2:**
+
+```
+Input: 
+root = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], k = 3
+Output: [[1, 2, 3, 4], [5, 6, 7], [8, 9, 10]]
+Explanation:
+The input has been split into consecutive parts with size difference at most 1, and earlier parts are a larger size than the later parts.
+```
+
+
+
+**Note:**
+
+The length of `root` will be in the range `[0, 1000]`.
+
+Each value of a node in the input will be an integer in the range `[0, 999]`.
+
+`k` will be an integer in the range `[1, 50]`.
+
+
+
+### Solution
+
+```java
+
+```
+
