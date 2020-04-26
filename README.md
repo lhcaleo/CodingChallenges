@@ -1,8 +1,12 @@
 # CS Notes
 ## Data Structures
 
-- [HashMap](https://github.com/lhcaleo/CodingChallenges/tree/master/Data_Structures/HashMap)
-- [Linked List](https://github.com/lhcaleo/CodingChallenges/blob/master/Leetcode_Solutions/list.md)
+- HashMap
+  - [Note + Implementation](https://github.com/lhcaleo/CodingChallenges/tree/master/Data_Structures/HashMap)
+  - [Leetcode Set](https://github.com/lhcaleo/CodingChallenges/blob/master/Leetcode_Solutions/HashMap.md)
+- Linked List
+  - [Note + Implementation](https://github.com/lhcaleo/CodingChallenges/tree/master/Data_Structures/List)
+  - [Leetcode Set](https://github.com/lhcaleo/CodingChallenges/blob/master/Leetcode_Solutions/list.md)
 
 ## Algorithms
 
