@@ -3,10 +3,10 @@
 
 - HashMap
   - [Note + Implementation](https://github.com/lhcaleo/CodingChallenges/tree/master/Data_Structures/HashMap)
-  - [Leetcode Set](https://github.com/lhcaleo/CodingChallenges/blob/master/Leetcode_Solutions/HashMap.md)
+  - [Leetcode Set](https://github.com/lhcaleo/CodingChallenges/tree/master/Leetcode_Solutions/HashMap.md)
 - Linked List
   - [Note + Implementation](https://github.com/lhcaleo/CodingChallenges/tree/master/Data_Structures/List)
-  - [Leetcode Set](https://github.com/lhcaleo/CodingChallenges/blob/master/Leetcode_Solutions/list.md)
+  - [Leetcode Set](https://github.com/lhcaleo/CodingChallenges/tree/master/Leetcode_Solutions/list.md)
 
 ## Algorithms
 
