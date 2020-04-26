@@ -91,10 +91,11 @@
 | 1    | [Two Sum](https://leetcode.com/problems/two-sum/)            | Easy       |
 | 217  | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | Easy       |
 | 594  | [Longest Harmonious Subsequence](https://leetcode.com/problems/longest-harmonious-subsequence/) | Easy       |
+| 128  | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | Hard       |
 
 
 
-**TOTAL # = 76**
+**TOTAL # = 77**
 
 
 

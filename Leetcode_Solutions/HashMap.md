@@ -1,8 +1,27 @@
 # HashMap
+<a id="markdown-HashMap" name="HashMap"></a>
+<!-- TOC -->
 
+- [HashMap](#hashmap)
+  - [1. Two Sum (Easy)](#1-two-sum-easy)
+    - [Description](#description)
+    - [Solution](#solution)
+  - [217. Contains Duplicate (Easy)](#217-contains-duplicate-easy)
+    - [Description](#description-1)
+    - [Solution](#solution-1)
+  - [594. Longest Harmonious Subsequence (Easy)](#594-longest-harmonious-subsequence-easy)
+    - [Description](#description-2)
+    - [Solution](#solution-2)
+  - [128. Longest Consecutive Sequence (Hard)](#128-longest-consecutive-sequence-hard)
+    - [Description](#description-3)
+    - [Solution](#solution-3)
+
+<!-- /TOC -->
 ## 1. Two Sum (Easy)
+<a id="markdown-Two%20Sum%20(Easy)" name="Two%20Sum%20(Easy)"></a>
 
 ### Description
+<a id="markdown-Description" name="Description"></a>
 
 Given an array of integers, return **indices** of the two numbers such that they add up to a specific target.
 
@@ -18,6 +37,7 @@ return [0, 1].
 ```
 
 ### Solution
+<a id="markdown-Solution" name="Solution"></a>
 
 ```java
 class Solution 
@@ -47,8 +67,10 @@ class Solution
 ```
 
 ## 217. Contains Duplicate (Easy)
+<a id="markdown-Contains%20Duplicate%20(Easy)" name="Contains%20Duplicate%20(Easy)"></a>
 
 ### Description
+<a id="markdown-Description" name="Description"></a>
 
 Given an array of integers, find if the array contains any duplicates.
 
@@ -76,6 +98,7 @@ Output: true
 ```
 
 ### Solution
+<a id="markdown-Solution" name="Solution"></a>
 
 ```java
 // Time: O(n) Space: O(n)
@@ -96,9 +119,11 @@ class Solution
 }
 ```
 
-## 594. Longest Harmonious Subsequence
+## 594. Longest Harmonious Subsequence (Easy)
+<a id="markdown-Longest%20Harmonious%20Subsequence%20(Easy)" name="Longest%20Harmonious%20Subsequence%20(Easy)"></a>
 
 ### Description
+<a id="markdown-Description" name="Description"></a>
 
 We define a harmounious array as an array where the difference between its maximum value and its minimum value is **exactly** 1.
 
@@ -113,6 +138,7 @@ Explanation: The longest harmonious subsequence is [3,2,2,2,3].
 ```
 
 ### Solution
+<a id="markdown-Solution" name="Solution"></a>
 
 ```java
 // Time: O(n) Space:O(n)
@@ -135,6 +161,61 @@ class Solution
         {
             if (map.containsKey(n + 1))
                 longest = Math.max(longest, map.get(n) + map.get(n + 1));
+        }
+        
+        return longest;
+    }
+}
+```
+
+## 128. Longest Consecutive Sequence (Hard)
+<a id="markdown-Longest%20Consecutive%20Sequence%20(Hard)" name="Longest%20Consecutive%20Sequence%20(Hard)"></a>
+
+### Description
+<a id="markdown-Description" name="Description"></a>
+
+Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
+
+Your algorithm should run in O(*n*) complexity.
+
+**Example:**
+
+```
+Input: [100, 4, 200, 1, 3, 2]
+Output: 4
+Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.
+```
+
+### Solution
+<a id="markdown-Solution" name="Solution"></a>
+
+```java
+// Time: O(n) Space: O(n)
+
+class Solution 
+{
+    public int longestConsecutive(int[] nums) 
+    {
+        if (nums == null || nums.length == 0) 
+            return 0;
+
+        HashSet<Integer> set = new HashSet<>(); 
+        for (int num : nums) set.add(num);
+      
+        int longest = 0;
+        for (int num : nums) 
+        {
+            int left = num - 1;
+            int right = num + 1;
+            
+            while (set.remove(left)) left--;
+            while (set.remove(right)) right++;
+            
+            longest = Math.max(longest, right - left - 1);
+           
+            // save time if there are items in nums, but no item in hashset.
+            if (set.isEmpty()) 
+                return longest;
         }
         
         return longest;
