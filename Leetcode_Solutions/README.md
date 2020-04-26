@@ -2,7 +2,7 @@
 
 | #    | Title                                                        | Difficulty |
 | ---- | ------------------------------------------------------------ | ---------- |
-| 1    | [Two Sum](https://leetcode.com/problems/two-sum/)            | Easy       |
+|      |                                                              |            |
 | 2    | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | Medium     |
 | 3    | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | Medium     |
 | 8    | [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/) | Medium     |
@@ -87,11 +87,14 @@
 | 77   | [Combinations](https://leetcode.com/problems/combinations/)  | Medium     |
 | 78   | [Subsets](https://leetcode.com/problems/subsets/)            | Medium     |
 | 169  | [Majority Element](https://leetcode.com/problems/majority-element/) | Easy       |
+|      | **--------------------HashMap--------------------**          |            |
+| 1    | [Two Sum](https://leetcode.com/problems/two-sum/)            | Easy       |
 | 217  | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | Easy       |
+| 594  | [Longest Harmonious Subsequence](https://leetcode.com/problems/longest-harmonious-subsequence/) | Easy       |
 
 
 
-**TOTAL # = 75**
+**TOTAL # = 76**
 
 
 

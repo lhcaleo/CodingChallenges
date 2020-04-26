@@ -96,3 +96,49 @@ class Solution
 }
 ```
 
+## 594. Longest Harmonious Subsequence
+
+### Description
+
+We define a harmounious array as an array where the difference between its maximum value and its minimum value is **exactly** 1.
+
+Now, given an integer array, you need to find the length of its longest harmonious subsequence among all its possible [subsequences](https://en.wikipedia.org/wiki/Subsequence).
+
+**Example 1:**
+
+```
+Input: [1,3,2,2,5,2,3,7]
+Output: 5
+Explanation: The longest harmonious subsequence is [3,2,2,2,3].
+```
+
+### Solution
+
+```java
+// Time: O(n) Space:O(n)
+class Solution 
+{
+    public int findLHS(int[] nums) 
+    {
+        HashMap<Integer, Integer> map = new HashMap<>();
+        
+        // key: number, value: # of times appear
+        for (int n: nums)
+        {
+            map.put(n, map.getOrDefault(n, 0) + 1);
+        }
+        
+        int longest = 0;
+        
+        // difference between max and min is exactly 1
+        for (int n: map.keySet())
+        {
+            if (map.containsKey(n + 1))
+                longest = Math.max(longest, map.get(n) + map.get(n + 1));
+        }
+        
+        return longest;
+    }
+}
+```
+
