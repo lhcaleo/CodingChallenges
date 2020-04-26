@@ -1,4 +1,5 @@
-[List](#list)
+# List 
+- [List](#list)
   - [160. Intersection of Two Linked Lists (Easy)](#160-intersection-of-two-linked-lists-easy)
     - [Description](#description)
     - [Solution](#solution)
@@ -22,14 +23,13 @@
     - [Solution](#solution-6)
   - [234. Palindrome Linked List](#234-palindrome-linked-list)
     - [Description](#description-7)
+    - [Solution](#solution-7)
   - [725. Split Linked List in Parts](#725-split-linked-list-in-parts)
     - [Description](#description-8)
-    - [Solution](#solution-7)
+    - [Solution](#solution-8)
   - [328. Odd Even Linked List](#328-odd-even-linked-list)
     - [Description](#description-9)
-    - [Solution](#solution-8)
-
-# List 
+    - [Solution](#solution-9)
 ## 160. Intersection of Two Linked Lists (Easy)
 
 ### Description
@@ -508,7 +508,7 @@ Output: true
 **Follow up:**
 Could you do it in O(n) time and O(1) space?
 
-###Solution
+### Solution
 
 ```java
 // Time: O(n) Space: O(1)
