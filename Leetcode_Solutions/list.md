@@ -3,31 +3,31 @@
   - [160. Intersection of Two Linked Lists (Easy)](#160-intersection-of-two-linked-lists-easy)
     - [Description](#description)
     - [Solution](#solution)
-  - [206. Reverse Linked List](#206-reverse-linked-list)
+  - [206. Reverse Linked List (Easy)](#206-reverse-linked-list-easy)
     - [Description](#description-1)
     - [Solution](#solution-1)
-  - [21. Merge Two Sorted Lists](#21-merge-two-sorted-lists)
+  - [21. Merge Two Sorted Lists (Easy)](#21-merge-two-sorted-lists-easy)
     - [Description](#description-2)
     - [Solution](#solution-2)
-  - [83. Remove Duplicates from Sorted List](#83-remove-duplicates-from-sorted-list)
+  - [83. Remove Duplicates from Sorted List (Easy)](#83-remove-duplicates-from-sorted-list-easy)
     - [Description](#description-3)
     - [Solution](#solution-3)
-  - [19. Remove Nth Node From End of List](#19-remove-nth-node-from-end-of-list)
+  - [19. Remove Nth Node From End of List (Medium)](#19-remove-nth-node-from-end-of-list-medium)
     - [Description](#description-4)
     - [Solution](#solution-4)
-  - [24. Swap Nodes in Pairs](#24-swap-nodes-in-pairs)
+  - [24. Swap Nodes in Pairs (Medium)](#24-swap-nodes-in-pairs-medium)
     - [Description](#description-5)
     - [Solution](#solution-5)
-  - [445. Add Two Numbers II](#445-add-two-numbers-ii)
+  - [445. Add Two Numbers II (Medium)](#445-add-two-numbers-ii-medium)
     - [Description](#description-6)
     - [Solution](#solution-6)
-  - [234. Palindrome Linked List](#234-palindrome-linked-list)
+  - [234. Palindrome Linked List (Easy)](#234-palindrome-linked-list-easy)
     - [Description](#description-7)
     - [Solution](#solution-7)
-  - [725. Split Linked List in Parts](#725-split-linked-list-in-parts)
+  - [725. Split Linked List in Parts (Medium)](#725-split-linked-list-in-parts-medium)
     - [Description](#description-8)
     - [Solution](#solution-8)
-  - [328. Odd Even Linked List](#328-odd-even-linked-list)
+  - [328. Odd Even Linked List (Medium)](#328-odd-even-linked-list-medium)
     - [Description](#description-9)
     - [Solution](#solution-9)
 ## 160. Intersection of Two Linked Lists (Easy)
@@ -128,7 +128,7 @@ public class Solution
 
 
 
-## 206. Reverse Linked List
+## 206. Reverse Linked List (Easy)
 
 ### Description
 
@@ -205,7 +205,7 @@ class Solution
 
 
 
-## 21. Merge Two Sorted Lists
+## 21. Merge Two Sorted Lists (Easy)
 
 ### Description
 
@@ -274,7 +274,7 @@ class Solution
 }
 ```
 
-## 83. Remove Duplicates from Sorted List
+## 83. Remove Duplicates from Sorted List (Easy)
 
 ### Description
 
@@ -324,7 +324,7 @@ class Solution
 
 
 
-## 19. Remove Nth Node From End of List
+## 19. Remove Nth Node From End of List (Medium)
 
 ### Description
 
@@ -380,7 +380,7 @@ class Solution
 
 
 
-## 24. Swap Nodes in Pairs
+## 24. Swap Nodes in Pairs (Medium)
 
 ### Description
 
@@ -427,7 +427,7 @@ class Solution
 
 
 
-## 445. Add Two Numbers II
+## 445. Add Two Numbers II (Medium)
 
 ### Description
 
@@ -485,7 +485,7 @@ class Solution
 }
 ```
 
-## 234. Palindrome Linked List
+## 234. Palindrome Linked List (Easy)
 
 ### Description
 
@@ -577,7 +577,7 @@ class Solution
 }
 ```
 
-## 725. Split Linked List in Parts
+## 725. Split Linked List in Parts (Medium)
 
 ### Description
 
@@ -676,7 +676,7 @@ class Solution
 }
 ```
 
-## 328. Odd Even Linked List
+## 328. Odd Even Linked List (Medium)
 
 ### Description
 
