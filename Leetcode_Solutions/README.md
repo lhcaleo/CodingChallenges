@@ -26,6 +26,8 @@
 | 24   | [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | Medium     |
 | 445  | [Add Two Numbers II](https://leetcode.com/problems/add-two-numbers-ii/) | Medium     |
 | 234  | [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) | Easy       |
+| 725  | [Split Linked List in Parts](https://leetcode.com/problems/split-linked-list-in-parts/) | Medium     |
+|      |                                                              |            |
 |      | **----------Sorting----------**                              |            |
 | 912  | [Sort an Array](https://leetcode.com/problems/sort-an-array/) | Medium     |
 | 215  | [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | Medium     |
