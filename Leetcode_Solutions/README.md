@@ -87,10 +87,11 @@
 | 77   | [Combinations](https://leetcode.com/problems/combinations/)  | Medium     |
 | 78   | [Subsets](https://leetcode.com/problems/subsets/)            | Medium     |
 | 169  | [Majority Element](https://leetcode.com/problems/majority-element/) | Easy       |
+| 217  | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | Easy       |
 
 
 
-**TOTAL # = 74**
+**TOTAL # = 75**
 
 
 
