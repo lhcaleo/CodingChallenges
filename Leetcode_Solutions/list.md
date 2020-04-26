@@ -1,5 +1,35 @@
-# List
+[List](#list)
+  - [160. Intersection of Two Linked Lists (Easy)](#160-intersection-of-two-linked-lists-easy)
+    - [Description](#description)
+    - [Solution](#solution)
+  - [206. Reverse Linked List](#206-reverse-linked-list)
+    - [Description](#description-1)
+    - [Solution](#solution-1)
+  - [21. Merge Two Sorted Lists](#21-merge-two-sorted-lists)
+    - [Description](#description-2)
+    - [Solution](#solution-2)
+  - [83. Remove Duplicates from Sorted List](#83-remove-duplicates-from-sorted-list)
+    - [Description](#description-3)
+    - [Solution](#solution-3)
+  - [19. Remove Nth Node From End of List](#19-remove-nth-node-from-end-of-list)
+    - [Description](#description-4)
+    - [Solution](#solution-4)
+  - [24. Swap Nodes in Pairs](#24-swap-nodes-in-pairs)
+    - [Description](#description-5)
+    - [Solution](#solution-5)
+  - [445. Add Two Numbers II](#445-add-two-numbers-ii)
+    - [Description](#description-6)
+    - [Solution](#solution-6)
+  - [234. Palindrome Linked List](#234-palindrome-linked-list)
+    - [Description](#description-7)
+  - [725. Split Linked List in Parts](#725-split-linked-list-in-parts)
+    - [Description](#description-8)
+    - [Solution](#solution-7)
+  - [328. Odd Even Linked List](#328-odd-even-linked-list)
+    - [Description](#description-9)
+    - [Solution](#solution-8)
 
+# List 
 ## 160. Intersection of Two Linked Lists (Easy)
 
 ### Description
@@ -642,6 +672,58 @@ class Solution
         }
         
         return result;
+    }
+}
+```
+
+## 328. Odd Even Linked List
+
+### Description
+
+```
+Given a singly linked list, group all odd nodes together followed by the even nodes. Please note here we are talking about the node number and not the value in the nodes.
+
+You should try to do it in place. The program should run in O(1) space complexity and O(nodes) time complexity.
+
+Example 1:
+
+Input: 1->2->3->4->5->NULL
+Output: 1->3->5->2->4->NULL
+Example 2:
+
+Input: 2->1->3->5->6->4->7->NULL
+Output: 2->3->6->7->1->5->4->NULL
+Note:
+
+The relative order inside both the even and odd groups should remain as it was in the input.
+The first node is considered odd, the second node even and so on ...
+```
+
+### Solution
+
+```java
+// Time: O(n) Space: O(1)
+class Solution 
+{
+    public ListNode oddEvenList(ListNode head) 
+    {
+        if (head == null) 
+            return head;
+        ListNode odd = head;
+        ListNode even = head.next;
+        ListNode even_head = even;
+        
+        while (even != null && even.next != null)
+        {
+            odd.next = odd.next.next;
+            odd = odd.next;
+            even.next = even.next.next;
+            even = even.next;
+        }
+        
+        odd.next = even_head;
+        
+        return head;
     }
 }
 ```
