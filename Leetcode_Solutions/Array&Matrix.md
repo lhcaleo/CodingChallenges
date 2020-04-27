@@ -381,3 +381,57 @@ class Solution
 }
 ```
 
+## 645. Set Mismatch
+
+### Description
+
+The set `S` originally contains numbers from 1 to `n`.
+
+Your task is to firstly find the number occurs twice and then find the number that is missing. Return them in the form of an array.
+
+**Example 1:**
+
+```
+Input: nums = [1,2,2,4]
+Output: [2,3]
+```
+
+**Example 2:**
+
+```
+Input: nums = [2,2]
+Output: [2,1]
+```
+
+### Solution
+
+```java
+// Time: O(n) Space: O(1)
+class Solution 
+{
+    public int[] findErrorNums(int[] nums) 
+    {
+        int dup = -1;
+        int missing = 1;
+
+        for (int n: nums) 
+        {
+            // if negative, it's duplicate
+            if (nums[Math.abs(n) - 1] < 0)
+                dup = Math.abs(n);
+            else
+                // fisrt visit of a number, change it to negative
+                nums[Math.abs(n) - 1] *= -1;
+        }
+
+        for (int i = 1; i < nums.length; i++)
+        {
+            if (nums[i] > 0)
+                missing = i + 1;
+        }
+              
+        return new int[]{dup, missing};
+    }
+}
+```
+
