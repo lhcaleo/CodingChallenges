@@ -90,7 +90,7 @@
 | 217  | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | Easy       |
 | 594  | [Longest Harmonious Subsequence](https://leetcode.com/problems/longest-harmonious-subsequence/) | Easy       |
 | 128  | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | Hard       |
-|      | **----------------------Array&Matrix---------------------**  |            |
+|      | **---------------------Array & Matrix--------------------**  |            |
 | 283  | [Move Zeroes](https://leetcode.com/problems/move-zeroes/)    | Easy       |
 | 566  | [Reshape the Matrix](https://leetcode.com/problems/reshape-the-matrix/) | Easy       |
 | 485  | [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | Easy       |
@@ -98,17 +98,9 @@
 | 240  | [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/description/) | Medium     |
 | 378  | [Kth Smallest Element in a Sorted Matrix](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/) | Medium     |
 
-
-
 **TOTAL # = 82**
 
-
-
-
-
-
-
-TODO: subsets II, permutation II, combination sum, combination sum II, N queens, Path Sum II
+Todo: subsets II, permutation II, combination sum, combination sum II, N queens, Path Sum II
 
 
 
