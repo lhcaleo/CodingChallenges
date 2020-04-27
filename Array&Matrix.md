@@ -1,4 +1,4 @@
-# Array & Matix
+# Array & Matrix
 
 ## 283. Move Zeroes (Easy)
 
