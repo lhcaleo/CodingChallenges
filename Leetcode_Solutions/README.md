@@ -47,6 +47,8 @@
 | 153  | [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | Medium     |
 | 33   | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | Medium     |
 | 34   | [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | Medium     |
+| 74   | [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) | Medium     |
+| 240  | [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/description/) | Medium     |
 |      | **------------------------------**                           |            |
 | 26   | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | Easy       |
 |      | **----------Two Pointer----------**                          |            |
@@ -58,8 +60,8 @@
 | 680  | [Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/) | Easy       |
 | 524  | [Longest Word in Dictionary through Deleting](https://leetcode.com/problems/longest-word-in-dictionary-through-deleting/) | Medium     |
 |      | **------------------------------**                           |            |
-| 74   | [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) | Medium     |
-| 240  | [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/) | Medium     |
+|      |                                                              |            |
+|      |                                                              |            |
 |      | **----------Binary Tree Traversal----------**                |            |
 | 144  | [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/) | Medium     |
 | 94   | [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) | Medium     |
@@ -96,6 +98,9 @@
 | 283  | [Move Zeroes](https://leetcode.com/problems/move-zeroes/)    | Easy       |
 | 566  | [Reshape the Matrix](https://leetcode.com/problems/reshape-the-matrix/) | Easy       |
 | 485  | [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | Easy       |
+| 74   | [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) | Medium     |
+| 240  | [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/description/) | Medium     |
+| 378  | [Kth Smallest Element in a Sorted Matrix](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/) | Medium     |
 
 
 

@@ -149,7 +149,85 @@ class Solution
 }
 ```
 
-## Search a 2D Matrix II (Medium)
+## 74. Search a 2D Matrix (Medium)
+
+###Description
+
+Write an efficient algorithm that searches for a value in an *m* x *n* matrix. This matrix has the following properties:
+
+- Integers in each row are sorted from left to right.
+- The first integer of each row is greater than the last integer of the previous row.
+
+**Example 1:**
+
+```
+Input:
+matrix = [
+  [1,   3,  5,  7],
+  [10, 11, 16, 20],
+  [23, 30, 34, 50]
+]
+target = 3
+Output: true
+```
+
+**Example 2:**
+
+```
+Input:
+matrix = [
+  [1,   3,  5,  7],
+  [10, 11, 16, 20],
+  [23, 30, 34, 50]
+]
+target = 13
+Output: false
+```
+
+###Solution
+
+```java
+class Solution 
+{
+    public boolean searchMatrix(int[][] matrix, int target) 
+    {
+        if (matrix == null || matrix.length == 0) 
+            return false;
+        // m rows, n columns
+        int m = matrix.length;
+		int n = matrix[0].length; 
+        
+        int start = 0;
+        int end = m * n - 1;
+        
+        while (start <= end)
+        {
+            int mid = start + (end-start) / 2;
+            int x = mid / n; // row index
+            int y = mid % n; // column index
+            
+            if (matrix[x][y] == target)
+            {
+                return true;
+            }
+            else if (matrix[x][y] < target)
+            {
+                start = mid + 1;
+            }
+            else
+            {
+                end = mid - 1;
+            }
+        }    
+        
+        return false;    
+    }
+}
+```
+
+
+
+## 240. Search a 2D Matrix II (Medium)
 
 ## Description
 
@@ -205,6 +283,100 @@ class Solution
         }
         
         return false;
+    }
+}
+```
+
+## 378. Kth Smallest Element in a Sorted Matrix (Medium)
+
+### Description
+
+Given a *n* x *n* matrix where each of the rows and columns are sorted in ascending order, find the kth smallest element in the matrix.
+
+Note that it is the kth smallest element in the sorted order, not the kth distinct element.
+
+**Example:**
+
+```
+matrix = [
+   [ 1,  5,  9],
+   [10, 11, 13],
+   [12, 13, 15]
+],
+k = 8,
+
+return 13.
+```
+
+### Solution
+
+**Binary Search**
+
+```java
+class Solution
+{
+    public int kthSmallest(int[][] matrix, int k) 
+    {
+        int n = matrix.length;
+        int left = matrix[0][0];
+        int right = matrix[n - 1][n - 1];
+        
+        while (left <= right) 
+        {
+            int mid = left + (right - left) / 2;
+            int count = 0;
+            
+            for (int i = 0; i < n; i++) 
+            {
+                for (int j = 0; j < n; j++) 
+                {
+                    if (matrix[i][j] <= mid)
+                        count++;
+                }
+            }
+            
+            if (count < k) 
+                left = mid + 1;
+            else 
+                right = mid - 1;
+        }
+        
+        return left;
+    }
+}
+```
+
+**Priority Queue** - Max Queue
+
+```java
+// Max Queue
+
+class Solution 
+{
+    public int kthSmallest(int[][] matrix, int k) 
+    {
+        int n = matrix.length;
+        PriorityQueue<Integer> max_queue = new PriorityQueue<>(new Comparator<Integer>(){
+            @Override
+            public int compare(Integer t1, Integer t2)
+            {
+                return t2 - t1;
+            }
+        });
+        
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                max_queue.add(matrix[i][j]);
+                if (max_queue.size() > k)
+                {
+                    max_queue.poll();
+                }
+            }
+        }
+        
+        return max_queue.peek();
     }
 }
 ```
