@@ -92,10 +92,12 @@
 | 217  | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | Easy       |
 | 594  | [Longest Harmonious Subsequence](https://leetcode.com/problems/longest-harmonious-subsequence/) | Easy       |
 | 128  | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | Hard       |
+|      | **--------------------Array&Matrix--------------------**     |            |
+| 283  | [Move Zeroes](https://leetcode.com/problems/move-zeroes/)    | Easy       |
 
 
 
-**TOTAL # = 77**
+**TOTAL # = 78**
 
 
 
