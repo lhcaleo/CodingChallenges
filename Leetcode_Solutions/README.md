@@ -94,10 +94,12 @@
 | 128  | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | Hard       |
 |      | **--------------------Array&Matrix--------------------**     |            |
 | 283  | [Move Zeroes](https://leetcode.com/problems/move-zeroes/)    | Easy       |
+| 566  | [Reshape the Matrix](https://leetcode.com/problems/reshape-the-matrix/) | Easy       |
+| 485  | [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | Easy       |
 
 
 
-**TOTAL # = 78**
+**TOTAL # = 80**
 
 
 
