@@ -6,7 +6,7 @@
   - [566. Reshape Matrix (Easy)](#566-reshape-matrix-easy)
     - [Description](#description-1)
     - [Solution](#solution-1)
-  - [485. Max Consecutive Ones](#485-max-consecutive-ones)
+  - [485. Max Consecutive Ones (Easy)](#485-max-consecutive-ones-easy)
     - [Description](#description-2)
     - [Solution](#solution-2)
   - [74. Search a 2D Matrix (Medium)](#74-search-a-2d-matrix-medium)
@@ -21,13 +21,13 @@
   - [287. Find the Duplicate Number (Medium)](#287-find-the-duplicate-number-medium)
     - [Description](#description-6)
     - [Solution](#solution-6)
-  - [645. Set Mismatch](#645-set-mismatch)
+  - [645. Set Mismatch (Easy)](#645-set-mismatch-easy)
     - [Description](#description-7)
     - [Solution](#solution-7)
-  - [667. Beautiful Arrangement II](#667-beautiful-arrangement-ii)
+  - [667. Beautiful Arrangement II (Medium)](#667-beautiful-arrangement-ii-medium)
     - [Description](#description-8)
     - [Solution](#solution-8)
-  - [687. Degree of an Array (Easy)](#687-degree-of-an-array-easy)
+  - [697. Degree of an Array (Easy)](#697-degree-of-an-array-easy)
     - [Description](#description-9)
     - [Solution](#solution-9)
   - [766. Toeplitz Matrix (Easy)](#766-toeplitz-matrix-easy)
@@ -145,7 +145,7 @@ class Solution
 }
 ```
 
-## 485. Max Consecutive Ones
+## 485. Max Consecutive Ones (Easy)
 
 ### Description
 
@@ -492,7 +492,7 @@ public:
 
 
 
-## 645. Set Mismatch
+## 645. Set Mismatch (Easy)
 
 ### Description
 
@@ -546,7 +546,7 @@ class Solution
 }
 ```
 
-## 667. Beautiful Arrangement II
+## 667. Beautiful Arrangement II (Medium)
 
 ### Description
 
@@ -615,13 +615,82 @@ public:
 };
 ```
 
-## 687. Degree of an Array (Easy)
+## 697. Degree of an Array (Easy)
 
 ### Description
 
+Given a non-empty array of non-negative integers `nums`, the **degree** of this array is defined as the maximum frequency of any one of its elements.
 
+Your task is to find the smallest possible length of a (contiguous) subarray of `nums`, that has the same degree as `nums`.
+
+**Example 1:**
+
+```
+Input: [1, 2, 2, 3, 1]
+Output: 2
+Explanation: 
+The input array has a degree of 2 because both elements 1 and 2 appear twice.
+Of the subarrays that have the same degree:
+[1, 2, 2, 3, 1], [1, 2, 2, 3], [2, 2, 3, 1], [1, 2, 2], [2, 2, 3], [2, 2]
+The shortest length is 2. So return 2.
+```
+
+**Example 2:**
+
+```
+Input: [1,2,2,3,1,4,2]
+Output: 6
+Degree of 3 because 2 appears 3 times
+subarrays: [1,2,2,3,1,4,2] = 7, [2,2,3,1,4,2] = 6
+thus, return 6
+```
+
+**Note:**
+
+`nums.length` will be between 1 and 50,000.
+
+`nums[i]` will be an integer between 0 and 49,999.
 
 ### Solution
+
+```c++
+// Time: O(n) Space: O(n)
+// One pass solution with 2 hashmap
+class Solution {
+public:
+    int findShortestSubArray(vector<int>& nums) 
+    {
+        unordered_map<int, int> count;
+        unordered_map<int, int> first;
+        
+        int res = 0;
+        int degree = 0;
+        
+        for (int i = 0; i < nums.size(); i++) 
+        {
+            // record each num's first occurence index
+            if (first.count(nums[i]) == 0)
+            {
+                first[nums[i]] = i;
+            } 
+            // if num has max frequency, update degree and res
+            if (++count[nums[i]] > degree) 
+            {
+                degree = count[nums[i]];
+                res = i - first[nums[i]] + 1;
+            } 
+            // if num is one of the numbers that has max frequency, 
+            // take min of current res and new res (want smallest possible length)
+            else if (count[nums[i]] == degree)
+            {
+                res = min(res, i - first[nums[i]] + 1);
+            }
+        }
+        
+        return res;
+    }
+};
+```
 
 
 

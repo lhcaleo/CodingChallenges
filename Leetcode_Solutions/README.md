@@ -100,8 +100,9 @@
 | 287  | [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/description/) | Medium     |
 | 645  | [Set Mismatch](https://leetcode.com/problems/set-mismatch/)  | Easy       |
 | 667  | [Beautiful Arrangement II](https://leetcode.com/problems/beautiful-arrangement-ii/) | Medium     |
+| 697  | [Degree of an Array](https://leetcode.com/problems/degree-of-an-array/) | Easy       |
 
-**TOTAL # = 85**
+**TOTAL # = 86**
 
 Todo: subsets II, permutation II, combination sum, combination sum II, N queens, Path Sum II
 
