@@ -13,7 +13,7 @@
     - [Description](#description-3)
     - [Solution](#solution-3)
   - [240. Search a 2D Matrix II (Medium)](#240-search-a-2d-matrix-ii-medium)
-  - [Description](#description-4)
+    - [Description](#description-4)
     - [Solution](#solution-4)
   - [378. Kth Smallest Element in a Sorted Matrix (Medium)](#378-kth-smallest-element-in-a-sorted-matrix-medium)
     - [Description](#description-5)
@@ -268,7 +268,7 @@ class Solution
 
 ## 240. Search a 2D Matrix II (Medium)
 
-## Description
+### Description
 
 Write an efficient algorithm that searches for a value in an *m* x *n* matrix. This matrix has the following properties:
 
