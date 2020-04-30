@@ -1,5 +1,44 @@
 # Array & Matrix
-
+- [Array & Matrix](#array--matrix)
+  - [283. Move Zeroes (Easy)](#283-move-zeroes-easy)
+    - [Description](#description)
+    - [Solution](#solution)
+  - [566. Reshape Matrix (Easy)](#566-reshape-matrix-easy)
+    - [Description](#description-1)
+    - [Solution](#solution-1)
+  - [485. Max Consecutive Ones](#485-max-consecutive-ones)
+    - [Description](#description-2)
+    - [Solution](#solution-2)
+  - [74. Search a 2D Matrix (Medium)](#74-search-a-2d-matrix-medium)
+    - [Description](#description-3)
+    - [Solution](#solution-3)
+  - [240. Search a 2D Matrix II (Medium)](#240-search-a-2d-matrix-ii-medium)
+  - [Description](#description-4)
+    - [Solution](#solution-4)
+  - [378. Kth Smallest Element in a Sorted Matrix (Medium)](#378-kth-smallest-element-in-a-sorted-matrix-medium)
+    - [Description](#description-5)
+    - [Solution](#solution-5)
+  - [287. Find the Duplicate Number (Medium)](#287-find-the-duplicate-number-medium)
+    - [Description](#description-6)
+    - [Solution](#solution-6)
+  - [645. Set Mismatch](#645-set-mismatch)
+    - [Description](#description-7)
+    - [Solution](#solution-7)
+  - [667. Beautiful Arrangement II](#667-beautiful-arrangement-ii)
+    - [Description](#description-8)
+    - [Solution](#solution-8)
+  - [687. Degree of an Array (Easy)](#687-degree-of-an-array-easy)
+    - [Description](#description-9)
+    - [Solution](#solution-9)
+  - [766. Toeplitz Matrix (Easy)](#766-toeplitz-matrix-easy)
+    - [Description](#description-10)
+    - [Solution](#solution-10)
+  - [565. Array Nesting (Medium)](#565-array-nesting-medium)
+    - [Description](#description-11)
+    - [Solution](#solution-11)
+  - [769. Max Chunks To Make Sorted (Medium)](#769-max-chunks-to-make-sorted-medium)
+    - [Description](#description-12)
+    - [Solution](#solution-12)
 ## 283. Move Zeroes (Easy)
 
 ### Description
@@ -575,4 +614,42 @@ public:
     }
 };
 ```
+
+## 687. Degree of an Array (Easy)
+
+### Description
+
+
+
+### Solution
+
+
+
+## 766. Toeplitz Matrix (Easy)
+
+### Description
+
+
+
+### Solution
+
+
+
+## 565. Array Nesting (Medium)
+
+### Description
+
+
+
+### Solution
+
+
+
+## 769. Max Chunks To Make Sorted (Medium)
+
+### Description
+
+
+
+### Solution
 
