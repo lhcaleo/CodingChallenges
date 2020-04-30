@@ -99,8 +99,9 @@
 | 378  | [Kth Smallest Element in a Sorted Matrix](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/) | Medium     |
 | 287  | [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/description/) | Medium     |
 | 645  | [Set Mismatch](https://leetcode.com/problems/set-mismatch/)  | Easy       |
+| 667  | [Beautiful Arrangement II](https://leetcode.com/problems/beautiful-arrangement-ii/) | Medium     |
 
-**TOTAL # = 84**
+**TOTAL # = 85**
 
 Todo: subsets II, permutation II, combination sum, combination sum II, N queens, Path Sum II
 
