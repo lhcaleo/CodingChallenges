@@ -101,8 +101,9 @@
 | 645  | [Set Mismatch](https://leetcode.com/problems/set-mismatch/)  | Easy       |
 | 667  | [Beautiful Arrangement II](https://leetcode.com/problems/beautiful-arrangement-ii/) | Medium     |
 | 697  | [Degree of an Array](https://leetcode.com/problems/degree-of-an-array/) | Easy       |
+| 766  | [Toeplitz Matrix](https://leetcode.com/problems/toeplitz-matrix/) | Easy       |
 
-**TOTAL # = 86**
+**TOTAL # = 87**
 
 Todo: subsets II, permutation II, combination sum, combination sum II, N queens, Path Sum II
 
