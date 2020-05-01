@@ -102,8 +102,9 @@
 | 667  | [Beautiful Arrangement II](https://leetcode.com/problems/beautiful-arrangement-ii/) | Medium     |
 | 697  | [Degree of an Array](https://leetcode.com/problems/degree-of-an-array/) | Easy       |
 | 766  | [Toeplitz Matrix](https://leetcode.com/problems/toeplitz-matrix/) | Easy       |
+| 565  | [Array Nesting](https://leetcode.com/problems/array-nesting/) | Medium     |
 
-**TOTAL # = 87**
+**TOTAL # = 88**
 
 Todo: subsets II, permutation II, combination sum, combination sum II, N queens, Path Sum II
 
