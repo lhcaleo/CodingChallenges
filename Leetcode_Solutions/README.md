@@ -106,8 +106,9 @@
 | 769  | [Max Chunks To Make Sorted](https://leetcode.com/problems/max-chunks-to-make-sorted/) | Medium     |
 |      | **---------------------Stack & Queue---------------------**  |            |
 | 232  | [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/) | Easy       |
+| 225  | [Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/) | Easy       |
 
-**TOTAL # = 90**
+**TOTAL # = 91**
 
 Todo: subsets II, permutation II, combination sum, combination sum II, N queens, Path Sum II
 
