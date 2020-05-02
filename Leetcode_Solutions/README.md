@@ -104,8 +104,10 @@
 | 766  | [Toeplitz Matrix](https://leetcode.com/problems/toeplitz-matrix/) | Easy       |
 | 565  | [Array Nesting](https://leetcode.com/problems/array-nesting/) | Medium     |
 | 769  | [Max Chunks To Make Sorted](https://leetcode.com/problems/max-chunks-to-make-sorted/) | Medium     |
+|      | **---------------------Stack & Queue---------------------**  |            |
+| 232  | [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/) | Easy       |
 
-**TOTAL # = 89**
+**TOTAL # = 90**
 
 Todo: subsets II, permutation II, combination sum, combination sum II, N queens, Path Sum II
 
