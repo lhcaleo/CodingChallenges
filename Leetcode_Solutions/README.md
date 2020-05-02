@@ -103,8 +103,9 @@
 | 697  | [Degree of an Array](https://leetcode.com/problems/degree-of-an-array/) | Easy       |
 | 766  | [Toeplitz Matrix](https://leetcode.com/problems/toeplitz-matrix/) | Easy       |
 | 565  | [Array Nesting](https://leetcode.com/problems/array-nesting/) | Medium     |
+| 769  | [Max Chunks To Make Sorted](https://leetcode.com/problems/max-chunks-to-make-sorted/) | Medium     |
 
-**TOTAL # = 88**
+**TOTAL # = 89**
 
 Todo: subsets II, permutation II, combination sum, combination sum II, N queens, Path Sum II
 
