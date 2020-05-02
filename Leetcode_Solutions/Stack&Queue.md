@@ -160,3 +160,139 @@ class MyStack
 }
 ```
 
+## 155. Min Stack (Easy)
+
+### Description
+
+Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
+
+- push(x) -- Push element x onto stack.
+- pop() -- Removes the element on top of the stack.
+- top() -- Get the top element.
+- getMin() -- Retrieve the minimum element in the stack.
+
+**Example 1:**
+
+```
+Input
+["MinStack","push","push","push","getMin","pop","top","getMin"]
+[[],[-2],[0],[-3],[],[],[],[]]
+
+Output
+[null,null,null,null,-3,null,0,-2]
+
+Explanation
+MinStack minStack = new MinStack();
+minStack.push(-2);
+minStack.push(0);
+minStack.push(-3);
+minStack.getMin(); // return -3
+minStack.pop();
+minStack.top();    // return 0
+minStack.getMin(); // return -2
+```
+
+**Constraints:**
+
+- Methods `pop`, `top` and `getMin` operations will always be called on **non-empty** stacks.
+
+### Solution
+
+**Two Stack Solution**
+
+```java
+// Two stack solution
+class MinStack 
+{
+    Stack<Integer> stack = new Stack<>();
+    Stack<Integer> min_stack = new Stack<>();
+    
+    
+    /** initialize your data structure here. */
+    public MinStack() 
+    {
+        min_stack.push(Integer.MAX_VALUE);
+    }
+    
+    public void push(int x) 
+    {
+        stack.push(x);
+        // if a smaller number is pushed in, accpet it
+        if (x <= min_stack.peek())
+        {
+            min_stack.push(x);
+        }
+    }
+    
+    public void pop() 
+    {
+        int poped = stack.peek();
+        stack.pop();
+        // if minimum number is poped, we pop it from minstack, 
+        //  otherwise ignore the pop
+        if (poped == min_stack.peek())
+        {
+            min_stack.pop();
+        }
+    }
+    
+    public int top() 
+    {
+        return stack.peek();
+    }
+    
+    public int getMin() 
+    {
+        return min_stack.peek();
+    }
+}
+```
+
+**One Stack Solution**
+
+```java
+// One stack solution
+// Idea: when push（x），x <= min, push current min first，then push x
+// thus, each min has its previous min underneath
+class MinStack 
+{
+    private Stack<Integer> stack;
+    int min = Integer.MAX_VALUE;
+
+    /** initialize your data structure here. */
+    public MinStack() 
+    {
+        stack = new Stack<>();
+    }
+    
+    public void push(int x) 
+    {
+        if (x <= min)
+        {
+            stack.push(min);
+            min = x;
+        }
+        stack.push(x);
+    }
+    
+    public void pop() 
+    {
+        int poped = stack.pop();
+        if (poped == min)
+        {
+            min = stack.pop();
+        }
+    }
+    
+    public int top() 
+    {
+        return stack.peek();
+    }
+    
+    public int getMin() 
+    {
+        return min;
+    }
+}
+```
+
