@@ -110,8 +110,10 @@
 | 155  | [Min Stack](https://leetcode.com/problems/min-stack/)        | Easy       |
 | 20   | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | Easy       |
 | 739  | [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) | Medium     |
+|      |                                                              |            |
+| 503  | [Next Greater Element II](https://leetcode.com/problems/next-greater-element-ii/) | Medium     |
 
-**TOTAL # = 92**
+**TOTAL # = 93**
 
 Todo: subsets II, permutation II, combination sum, combination sum II, N queens, Path Sum II
 
