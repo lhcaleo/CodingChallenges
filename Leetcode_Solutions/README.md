@@ -108,6 +108,7 @@
 | 232  | [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/) | Easy       |
 | 225  | [Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/) | Easy       |
 | 155  | [Min Stack](https://leetcode.com/problems/min-stack/)        | Easy       |
+| 20   | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | Easy       |
 
 **TOTAL # = 91**
 

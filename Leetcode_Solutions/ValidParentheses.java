@@ -1,30 +1,44 @@
 // https://leetcode.com/problems/valid-parentheses/submissions/
-// O(n) time. O(n) memory for stack
-
-
-class Solution {
-	public boolean isValid(String s) {
-		if(s.length() % 2 != 0) return false;
+// Time: O(n) Space: O(n)
+class Solution 
+{
+	public boolean isValid(String s) 
+	{
+		if (s.length() % 2 != 0)
+			return false;
 		
 		Stack<Character> stack = new Stack<>();
-		for (char c : s.toCharArray()) {
-			if (c == '(' || c == '[' || c == '{')
+		
+		for (int i = 0; i < s.length(); i++)
+		{
+			char c = s.charAt(i);
+			
+			if (c == '(' || c == '{' || c == '[')
+			{
 				stack.push(c);
-			else {
+			}
+			else
+			{
 				if (stack.isEmpty())
 					return false;
-				if (c == ')') {
-					if ('(' != stack.pop())
+				else if (c == ')')
+				{
+					if (stack.pop() != '(')
 						return false;
-				} else if (c == ']') {
-					if ('[' != stack.pop())
+				}
+				else if (c == '}')
+				{
+					if (stack.pop() != '{')
 						return false;
-				} else if (c == '}') {
-					if ('{' != stack.pop())
+				}
+				else if (c == ']')
+				{
+					if (stack.pop() != '[')
 						return false;
 				}
 			}
 		}
+		
 		return stack.isEmpty();
 	}
 }
