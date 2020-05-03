@@ -17,7 +17,7 @@
 - [Binary Search](https://github.com/lhcaleo/CodingChallenges/blob/master/Leetcode_Solutions/binary_search.md)
 
 ## LeetCode Problems
-- [LeetCode](https://github.com/lhcaleo/CodingChallenges/tree/master/Leetcode_Solutions)
+- [Solutions](https://github.com/lhcaleo/CodingChallenges/tree/master/Leetcode_Solutions)
 
 ## LeetCode Databases
 
