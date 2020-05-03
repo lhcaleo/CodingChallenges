@@ -1,55 +1,69 @@
-// https://www.lintcode.com/problem/max-stack/description
-
-import java.util.*;
-
-class MaxStack
+class MaxStack 
 {
+	// one tracks all numbers
 	Stack<Integer> stack = new Stack<>();
-	Stack<Integer> maxStack = new Stack<>();
-	
-	public MaxStack(){}
-	
-	public void push(int x)
+	// one tracks latest max value
+	Stack<Integer> max_stack = new Stack<>();
+	public MaxStack() {}
+
+	// with 2 stacks, one store all numbers, one store 
+	public void push(int x) 
 	{
-		if(stack.isEmpty())
+		if (stack.isEmpty())
 		{
 			stack.push(x);
-			maxStack.push(x);
-		} 
+			max_stack.push(x);
+		}
 		else 
 		{
-			if(x >= maxStack.peek()) maxStack.push(x);
-			else maxStack.push(maxStack.peek());
+			// max_stack only push new max value, otherwise push old max for same stack size
+			if (x >= max_stack.peek())
+				max_stack.push(x);
+			else
+				max_stack.push(max_stack.peek());
+	
 			stack.push(x);
 		}
 	}
-	
-	public int pop(){
-		maxStack.pop();
+
+	public int pop() 
+	{
+		// keep both stack same size
+		max_stack.pop();
 		return stack.pop();
 	}
-	
-	public int top(){
+
+	public int top() 
+	{
 		return stack.peek();
 	}
-	
-	public int peekMax(){
-		return maxStack.peek();
-	}
-	
-	public int popMax()
+
+	public int peekMax() 
 	{
-		Stack<Integer> helper = new Stack<>();
-		while (stack.peek() != maxStack.peek()) 
+		return max_stack.peek();
+	}
+
+	public int popMax() 
+	{
+		Stack<Integer> temp = new Stack<>();
+		// searching for position of max from regular stack
+		while (stack.peek() != max_stack.peek())
 		{
-			helper.push(stack.pop());
+			temp.push(stack.pop());
 		}
+		// then, pop the max from regular stack, and record its value
 		int max = stack.pop();
-		while (!helper.isEmpty())
+		// pop from max_stack at the same time
+		max_stack.pop();
+		// push other elements back to regular stack
+		while (!temp.isEmpty())
 		{
-			stack.push(helper.pop());
+			stack.push(temp.pop());
 		}
-		maxStack.pop();
 		return max;
 	}
 }
+
+
+
+

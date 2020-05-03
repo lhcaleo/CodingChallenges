@@ -33,10 +33,6 @@
 | 347  | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | Medium     |
 | 451  | [Sort Characters By Frequency](https://leetcode.com/problems/sort-characters-by-frequency/) | Medium     |
 | 75   | [Sort Colors](https://leetcode.com/problems/sort-colors/)    | Medium     |
-|      | **----------------------------------------------------------------** |            |
-| 20   | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | Easy       |
-| 716  | [Max Stack](https://leetcode.com/articles/max-stack/)        | Easy       |
-| 155  | [Min Stack](https://leetcode.com/problems/min-stack/)        | Easy       |
 |      | **---------------------Binary Search----------------------** |            |
 | 704  | [Binary Search](https://leetcode.com/problems/binary-search/) | Easy       |
 | 69   | [Sqrt(x)](https://leetcode.com/problems/sqrtx/)              | Easy       |
@@ -108,10 +104,11 @@
 | 232  | [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/) | Easy       |
 | 225  | [Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/) | Easy       |
 | 155  | [Min Stack](https://leetcode.com/problems/min-stack/)        | Easy       |
+| 716  | [Max Stack](https://leetcode.com/articles/max-stack/)        | Easy       |
 | 20   | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | Easy       |
-| 739  | [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) | Medium     |
 | 496  | [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/) | Easy       |
 | 503  | [Next Greater Element II](https://leetcode.com/problems/next-greater-element-ii/) | Medium     |
+| 739  | [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) | Medium     |
 
 **TOTAL # = 94**
 
