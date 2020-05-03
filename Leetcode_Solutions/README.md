@@ -109,8 +109,9 @@
 | 225  | [Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/) | Easy       |
 | 155  | [Min Stack](https://leetcode.com/problems/min-stack/)        | Easy       |
 | 20   | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | Easy       |
+| 739  | [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) | Medium     |
 
-**TOTAL # = 91**
+**TOTAL # = 92**
 
 Todo: subsets II, permutation II, combination sum, combination sum II, N queens, Path Sum II
 
