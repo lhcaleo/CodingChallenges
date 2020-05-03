@@ -378,45 +378,70 @@ class Solution
 }
 ```
 
-## 739. Daily Temperatures (Medium)
+## 496. Next Greater Element I (Easy)
 
 ### Description
 
-Given a list of daily temperatures `T`, return a list such that, for each day in the input, tells you how many days you would have to wait until a warmer temperature. If there is no future day for which this is possible, put `0` instead.
+You are given two arrays **(without duplicates)** `nums1` and `nums2` where `nums1`’s elements are subset of `nums2`. Find all the next greater numbers for `nums1`'s elements in the corresponding places of `nums2`.
 
-For example, given the list of temperatures `T = [73, 74, 75, 71, 69, 72, 76, 73]`, your output should be `[1, 1, 4, 2, 1, 1, 0, 0]`.
+The Next Greater Number of a number **x** in `nums1` is the first greater number to its right in `nums2`. If it does not exist, output -1 for this number.
 
-**Note:** The length of `temperatures` will be in the range `[1, 30000]`. Each temperature will be an integer in the range `[30, 100]`.
+**Example 1:**
+
+```
+Input: nums1 = [4,1,2], nums2 = [1,3,4,2].
+Output: [-1,3,-1]
+Explanation:
+    For number 4 in the first array, you cannot find the next greater number for it in the second array, so output -1.
+    For number 1 in the first array, the next greater number for it in the second array is 3.
+    For number 2 in the first array, there is no next greater number for it in the second array, so output -1.
+```
+
+
+
+**Example 2:**
+
+```
+Input: nums1 = [2,4], nums2 = [1,2,3,4].
+Output: [3,-1]
+Explanation:
+    For number 2 in the first array, the next greater number for it in the second array is 3.
+    For number 4 in the first array, there is no next greater number for it in the second array, so output -1.
+```
 
 ### Solution
 
 ```java
-// Time: O(n) for array iteration Space: O(n) one stack + one array
+// Time: O(m) for num2 iteration, Space: O(n + n) for one stack and one hashmap 
+// Key: using one single-order stack (elements decreasing from top to bottom)
 class Solution 
 {
-    public int[] dailyTemperatures(int[] T) 
+    public int[] nextGreaterElement(int[] nums1, int[] nums2) 
     {
-        int len = T.length;
-        int[] res = new int[len];
         Stack<Integer> stack = new Stack<>();
+        HashMap<Integer, Integer> map = new HashMap<>();
         
-        for (int warmer_index = 0; warmer_index < len; warmer_index++)
+        for (int i = 0; i < nums2.length; i++)
         {
-            while (!stack.isEmpty() && T[warmer_index] > T[stack.peek()])
+            while (!stack.isEmpty() && nums2[i] > stack.peek())
             {
-                int reference_index = stack.peek();
-                stack.pop();
-                // distance of these 2 days is the diff of their index
-                
-                res[reference_index] = warmer_index - reference_index;
+                // key: element, value: its greater element
+                map.put(stack.pop(), nums2[i]);
             }
-            stack.push(warmer_index);
+            stack.push(nums2[i]);
         }
         
-        return res;
+        for (int j = 0; j < nums1.length; j++)
+        {
+            nums1[j] = map.getOrDefault(nums1[j], -1);
+        }
+        
+        return nums1;
     }
 }
 ```
+
+
 
 ## 503. Next Greater Element II (Medium)
 
@@ -460,6 +485,46 @@ class Solution
             
             if (greater_index < len)
                 stack.push(greater_index);
+        }
+        
+        return res;
+    }
+}
+```
+
+## 739. Daily Temperatures (Medium)
+
+### Description
+
+Given a list of daily temperatures `T`, return a list such that, for each day in the input, tells you how many days you would have to wait until a warmer temperature. If there is no future day for which this is possible, put `0` instead.
+
+For example, given the list of temperatures `T = [73, 74, 75, 71, 69, 72, 76, 73]`, your output should be `[1, 1, 4, 2, 1, 1, 0, 0]`.
+
+**Note:** The length of `temperatures` will be in the range `[1, 30000]`. Each temperature will be an integer in the range `[30, 100]`.
+
+### Solution
+
+```java
+// Time: O(n) for array iteration Space: O(n) one stack + one array
+class Solution 
+{
+    public int[] dailyTemperatures(int[] T) 
+    {
+        int len = T.length;
+        int[] res = new int[len];
+        Stack<Integer> stack = new Stack<>();
+        
+        for (int warmer_index = 0; warmer_index < len; warmer_index++)
+        {
+            while (!stack.isEmpty() && T[warmer_index] > T[stack.peek()])
+            {
+                int reference_index = stack.peek();
+                stack.pop();
+                // distance of these 2 days is the diff of their index
+                
+                res[reference_index] = warmer_index - reference_index;
+            }
+            stack.push(warmer_index);
         }
         
         return res;
