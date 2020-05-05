@@ -9,6 +9,7 @@
   - [Leetcode Set](https://github.com/lhcaleo/CodingChallenges/blob/master/Data_Structures/List/List_Leetcode.md)
 - [Array & Matrix](https://github.com/lhcaleo/CodingChallenges/tree/master/Data_Structures/Array%20%26%20Matrix)
 - [Stack & Queue](https://github.com/lhcaleo/CodingChallenges/tree/master/Data_Structures/Stack%20%26%20Queue)
+- [String](https://github.com/lhcaleo/CodingChallenges/tree/master/Data_Structures/String)
 
 ## Algorithms
 
