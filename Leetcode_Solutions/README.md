@@ -109,8 +109,12 @@
 | 496  | [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/) | Easy       |
 | 503  | [Next Greater Element II](https://leetcode.com/problems/next-greater-element-ii/) | Medium     |
 | 739  | [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) | Medium     |
+|      |                                                              |            |
+| 28   | [Implement strStr()](https://leetcode.com/problems/implement-strstr/) | Easy       |
+| 344  | [Reverse String](https://leetcode.com/problems/reverse-string/) | Easy       |
+| 796  | [Rotate String](https://leetcode.com/problems/rotate-string/) | Easy       |
 
-**TOTAL # = 94**
+**TOTAL # = 95**
 
 Todo: subsets II, permutation II, combination sum, combination sum II, N queens, Path Sum II
 
