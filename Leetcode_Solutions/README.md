@@ -19,6 +19,7 @@
 | 344  | [Reverse String](https://leetcode.com/problems/reverse-string/) | Easy       |
 | 796  | [Rotate String](https://leetcode.com/problems/rotate-string/) | Easy       |
 | 151  | [Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/) | Medium     |
+| 242  | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | Easy       |
 |      | **-----------------------------List------------------------------** |            |
 | 160  | [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) | Easy       |
 | 206  | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Easy       |
@@ -113,7 +114,7 @@
 | 503  | [Next Greater Element II](https://leetcode.com/problems/next-greater-element-ii/) | Medium     |
 | 739  | [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) | Medium     |
 
-**TOTAL # = 96**
+**TOTAL # = 97**
 
 Todo: subsets II, permutation II, combination sum, combination sum II, N queens, Path Sum II
 
