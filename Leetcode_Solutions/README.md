@@ -23,6 +23,7 @@
 | 205  | [Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/) | Easy       |
 | 647  | [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) | Medium     |
 | 9    | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | Easy       |
+| 696  | [Count Binary Substrings](https://leetcode.com/problems/count-binary-substrings/) | Easy       |
 |      | **-----------------------------List------------------------------** |            |
 | 160  | [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) | Easy       |
 | 206  | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Easy       |
@@ -117,7 +118,7 @@
 | 503  | [Next Greater Element II](https://leetcode.com/problems/next-greater-element-ii/) | Medium     |
 | 739  | [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) | Medium     |
 
-**TOTAL # = 100**
+**TOTAL # = 101**
 
 Todo: subsets II, permutation II, combination sum, combination sum II, N queens, Path Sum II
 

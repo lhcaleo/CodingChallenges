@@ -1,5 +1,35 @@
 # String
-
+- [String](#string)
+  - [28. Implement strStr (Easy)](#28-implement-strstr-easy)
+    - [Description](#description)
+    - [Solution](#solution)
+  - [344. Reverse String (Easy)](#344-reverse-string-easy)
+    - [Description](#description-1)
+    - [Solution](#solution-1)
+  - [796. Rotate String (Easy)](#796-rotate-string-easy)
+    - [Description](#description-2)
+    - [Solution](#solution-2)
+  - [151. Reverse Words in a String (Medium)](#151-reverse-words-in-a-string-medium)
+    - [Description](#description-3)
+    - [Solution](#solution-3)
+  - [242. Valid Anagram (Easy)](#242-valid-anagram-easy)
+    - [Description](#description-4)
+    - [Solution](#solution-4)
+  - [409. Longest Palindrome (Easy)](#409-longest-palindrome-easy)
+    - [Description](#description-5)
+    - [Solution](#solution-5)
+  - [205. Isomorphic Strings (Easy)](#205-isomorphic-strings-easy)
+    - [Description](#description-6)
+    - [Solution](#solution-6)
+  - [647. Palindromic Substrings (Easy)](#647-palindromic-substrings-easy)
+    - [Descriptiion](#descriptiion)
+    - [Solution](#solution-7)
+  - [9. Palindrome Number (Easy)](#9-palindrome-number-easy)
+    - [Description](#description-7)
+    - [Solution](#solution-8)
+  - [696. Count Binary Substrings (Easy)](#696-count-binary-substrings-easy)
+    - [Description](#description-8)
+    - [Solution](#solution-9)
 ## 28. Implement strStr (Easy)
 
 ### Description
@@ -581,5 +611,85 @@ class Solution
         return x == reverse;
     }
 }
+```
+
+## 696. Count Binary Substrings (Easy)
+
+### Description
+
+Give a string `s`, count the number of non-empty (contiguous) substrings that have the same number of 0's and 1's, and all the 0's and all the 1's in these substrings are grouped consecutively.
+
+Substrings that occur multiple times are counted the number of times they occur.
+
+**Example 1:**
+
+```
+Input: "00110011"
+Output: 6
+Explanation: There are 6 substrings that have equal number of consecutive 1's and 0's: "0011", "01", "1100", "10", "0011", and "01".
+
+Notice that some of these substrings repeat and are counted the number of times they occur.
+
+Also, "00110011" is not a valid substring because all the 0's (and 1's) are not grouped together.
+```
+
+**Example 2:**
+
+```
+Input: "10101"
+Output: 4
+Explanation: There are 4 substrings: "10", "01", "10", "01" that have equal number of consecutive 1's and 0's.
+```
+
+**Note:**
+
+`s.length` will be between 1 and 50,000.
+
+`s` will only consist of "0" or "1" characters.
+
+### Solution
+
+```java
+// Time: O(n) Space: O(1)
+// kind like two pointer
+// since consecutive, no cases like 0101, 1001
+class Solution 
+{
+    public int countBinarySubstrings(String s) 
+    {
+        int prev_len = 0;
+        int current_len = 1;
+        int count = 0;
+        
+        for (int i = 1; i < s.length(); i++)
+        {
+            // check if current num is equal to previous num
+            // if so, the count of current num ++
+            if (s.charAt(i - 1) == s.charAt(i))
+                current_len++;
+            // if not, current num becomes previous num
+            else 
+            {
+                prev_len = current_len;
+                // reset current length back to 1
+                current_len = 1;
+            }
+            // = : 0011  > : 00111
+            if (prev_len >= current_len)
+                count++;
+        }
+        
+        return count;
+    }
+}
+
+/*
+index    01234
+example [00110]
+i = 1, curr++ = 2
+i = 2, prev = curr = 2, curr = 1  (prev >= curr) count++ = 1
+i = 3, curr++ = 2, (prev >= curr) count++ = 2
+i = 4, prev = curr = 2, curr = 1, (prev >= curr) count++ = 3
+*/
 ```
 
