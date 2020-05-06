@@ -21,7 +21,7 @@
 | 242  | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | Easy       |
 | 409  | [Longest Palindrome](https://leetcode.com/problems/longest-palindrome/) | Easy       |
 | 205  | [Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/) | Easy       |
-|      |                                                              |            |
+| 647  | [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) | Medium     |
 | 9    | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | Easy       |
 |      | **-----------------------------List------------------------------** |            |
 | 160  | [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) | Easy       |
@@ -117,7 +117,7 @@
 | 503  | [Next Greater Element II](https://leetcode.com/problems/next-greater-element-ii/) | Medium     |
 | 739  | [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) | Medium     |
 
-**TOTAL # = 99**
+**TOTAL # = 100**
 
 Todo: subsets II, permutation II, combination sum, combination sum II, N queens, Path Sum II
 
