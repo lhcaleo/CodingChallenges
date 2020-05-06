@@ -5,7 +5,6 @@
 | 2    | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | Medium     |
 | 3    | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | Medium     |
 | 8    | [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/) | Medium     |
-| 9    | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | Easy       |
 | 5    | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | Medium     |
 | 13   | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | Easy       |
 | 14   | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | Easy       |
@@ -22,6 +21,8 @@
 | 242  | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | Easy       |
 | 409  | [Longest Palindrome](https://leetcode.com/problems/longest-palindrome/) | Easy       |
 | 205  | [Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/) | Easy       |
+|      |                                                              |            |
+| 9    | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | Easy       |
 |      | **-----------------------------List------------------------------** |            |
 | 160  | [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) | Easy       |
 | 206  | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Easy       |

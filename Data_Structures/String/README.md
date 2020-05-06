@@ -481,3 +481,46 @@ So we use two arrays here m1 and m2, initialized space is 256 (Since the whole A
 */
 ```
 
+## 9. Palindrome Number (Easy)
+
+### Description
+
+Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.
+
+**Example**
+
+```
+Input: 121 Output: true
+Input: -121 Output: false
+Input: 10 Output: false
+```
+
+### Solution
+
+```java
+// Time: O(n) Space: O(1)
+class Solution 
+{
+    public boolean isPalindrome(int x) 
+    {
+        if (x < 0)
+            return false;
+        if (x == 0)
+            return true;
+        
+        int copy_x = x;
+        int reverse = 0;
+        
+        // reverse the integer x
+        while (copy_x != 0)
+        {
+            int digit = copy_x % 10;
+            reverse = reverse * 10 + digit;
+            copy_x = copy_x / 10;
+        }
+        
+        return x == reverse;
+    }
+}
+```
+
