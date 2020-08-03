@@ -18,18 +18,21 @@
   - [24. Swap Nodes in Pairs (Medium)](#24-swap-nodes-in-pairs-medium)
     - [Description](#description-5)
     - [Solution](#solution-5)
-  - [445. Add Two Numbers II (Medium)](#445-add-two-numbers-ii-medium)
+  - [25. Reverse Nodes in k-Group (Hard)](#25-reverse-nodes-in-k-group-hard)
     - [Description](#description-6)
     - [Solution](#solution-6)
-  - [234. Palindrome Linked List (Easy)](#234-palindrome-linked-list-easy)
+  - [445. Add Two Numbers II (Medium)](#445-add-two-numbers-ii-medium)
     - [Description](#description-7)
     - [Solution](#solution-7)
-  - [725. Split Linked List in Parts (Medium)](#725-split-linked-list-in-parts-medium)
+  - [234. Palindrome Linked List (Easy)](#234-palindrome-linked-list-easy)
     - [Description](#description-8)
     - [Solution](#solution-8)
-  - [328. Odd Even Linked List (Medium)](#328-odd-even-linked-list-medium)
+  - [725. Split Linked List in Parts (Medium)](#725-split-linked-list-in-parts-medium)
     - [Description](#description-9)
     - [Solution](#solution-9)
+  - [328. Odd Even Linked List (Medium)](#328-odd-even-linked-list-medium)
+    - [Description](#description-10)
+    - [Solution](#solution-10)
 ## 160. Intersection of Two Linked Lists (Easy)
 
 ### Description
@@ -427,6 +430,92 @@ class Solution
 
 
 
+## 25. Reverse Nodes in k-Group (Hard)
+
+### Description
+
+Given a linked list, reverse the nodes of a linked list *k* at a time and return its modified list.
+
+*k* is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of *k* then left-out nodes in the end should remain as it is.
+
+**Example:**
+
+Given this linked list: `1->2->3->4->5`
+
+For *k* = 2, you should return: `2->1->4->3->5`
+
+For *k* = 3, you should return: `3->2->1->4->5`
+
+### Solution
+
+```java
+// Time: O(n * k) Space: O(1)
+// Optimal Time: O(n) Worst Time: O(n^2)
+
+class Solution 
+{
+    public ListNode reverseKGroup(ListNode head, int k) 
+    {
+        ListNode dummyHead = new ListNode(-1);
+        dummyHead.next = head;
+        
+        // previous node of the head of sub-list
+        ListNode prev = dummyHead;
+        // tail node of the sub-list
+        ListNode end = dummyHead;
+        
+        while (end != null)
+        {
+            // move pointer towards the tail node
+            for (int i = 0; i < k && end != null; i++)
+            {
+                end = end.next;
+            }
+            if (end == null)
+                break;
+            
+            // head node of the sub-list
+            ListNode start = prev.next;
+            // record the head of next sub-list to be reversed
+            ListNode next = end.next;
+            // set the next pointer of end to be null, assign later
+            end.next = null;
+            
+            // prev's next is now the original end node of reversed sub-list
+            prev.next = reverse(start);
+            // start is actually the original end node
+            // this links reversed sub-list and next sub-list to be reversed
+            start.next = next;
+            
+            // reset prev and end pointer for the next iteration
+            prev = start;
+            end = prev;
+        }
+        
+        return dummyHead.next;   
+    }
+    
+    private ListNode reverse(ListNode head)
+    {
+        // prev curr next
+        ListNode prev = null;
+        ListNode curr = head;
+        
+        while (curr != null)
+        {
+            ListNode next = curr.next;
+            curr.next = prev; // reverse the next pointer
+            prev = curr;
+            curr = next;
+        }
+        
+        return prev;
+    }
+}
+```
+
+
+
 ## 445. Add Two Numbers II (Medium)
 
 ### Description
@@ -484,6 +573,8 @@ class Solution
     }
 }
 ```
+
+
 
 ## 234. Palindrome Linked List (Easy)
 

@@ -31,6 +31,7 @@
 | 83   | [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) | Easy       |
 | 19   | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | Medium     |
 | 24   | [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | Medium     |
+| 25   | [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) | Hard       |
 | 445  | [Add Two Numbers II](https://leetcode.com/problems/add-two-numbers-ii/) | Medium     |
 | 234  | [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) | Easy       |
 | 725  | [Split Linked List in Parts](https://leetcode.com/problems/split-linked-list-in-parts/) | Medium     |
@@ -118,7 +119,7 @@
 | 503  | [Next Greater Element II](https://leetcode.com/problems/next-greater-element-ii/) | Medium     |
 | 739  | [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) | Medium     |
 
-**TOTAL # = 101**
+**TOTAL # = 102**
 
 Todo: subsets II, permutation II, combination sum, combination sum II, N queens, Path Sum II
 
