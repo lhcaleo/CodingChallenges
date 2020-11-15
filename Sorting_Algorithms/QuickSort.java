@@ -10,7 +10,9 @@ public class QuickSort
 	
 	private static void quickSort(int[] arr, int start, int end)
 	{
-		if (start >= end) return;
+		if (start >= end) 
+			return;
+
 		int piv_index = partition(arr, start ,end);
 		quickSort(arr, start, piv_index - 1);
 		quickSort(arr, piv_index + 1, end);
@@ -21,32 +23,36 @@ public class QuickSort
 		// take first element as pivot
 		int pivot = arr[start];
 		// index of pivot's next element 
-		int k = start + 1;
-				
-		int swapTemp = 0;
-		
+		int wall = start + 1;
+
+		// iterate from second index to last index
 		for (int i = start + 1; i <= end; i++)
 		{
+			// if the number is less than pivot, swap them
 			if (arr[i] < pivot)
 			{
 				// swap arr[i] and arr[k]
-				swapTemp = arr[i];
-				arr[i] = arr[k];
-				arr[k] = swapTemp;
-				k++;
+				swap(arr, i, wall);
+				wall++;
 			}
 		}
-		k = k - 1; //move pointer one-step back after iteration
+		wall = wall - 1; //move pointer one-step back after iteration
 		
 		// put the pivot element in its proper place
-		// swap the pivot: arr[start] 
-		// and the last element that is smaller than it: arr[k-1]
-		swapTemp = arr[start];
-		arr[start] = arr[k];
-		arr[k] = swapTemp;
-		
+		// 		swap the pivot: arr[start] 
+		// 			and the last element that is smaller than it: arr[k-1]
+		swap(arr, start, wall);
+				
+		// then all the numbers before pivot is less than the pivot
+		// 		all the numbers after pivot is greater than the pivot
 		// return the position of pivot
-		return k;
+		return wall;
 	}
 	
+	private static void swap(int[] arr, int a, int b)
+	{
+		int temp = arr[a];
+		arr[a] = arr[b];
+		arr[b] = temp;
+	}
 }
